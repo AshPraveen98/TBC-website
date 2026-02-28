@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Baker's Company (TBC)</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- GA4 (paste your ID later) -->
+<!--
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXXXXX');
+</script>
+-->
+
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <div class="hero-brand">THE BAKER'S COMPANY • TBC</div>
+    <h1>Thoughtful Interiors.<br>Timeless Living.</h1>
+    <p>Residential and commercial interiors crafted with warmth, precision, and personality.</p>
+
+    <div class="hero-cta">
+      <a href="javascript:void(0)" onclick="openPopup()" class="btn-primary">Book Free Consultation</a>
+      <a href="#projects" class="btn-secondary">View Projects</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="projects">
+  <div class="projects-container">
+
+    <div class="projects-header">
+      <h2>Featured Projects</h2>
+      <p>A glimpse into our recent interior transformations.</p>
+    </div>
+
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-image-wrapper">
+          <img src="images/project1.jpg">
+          <div class="project-overlay"></div>
+        </div>
+        <div class="project-info">
+          <div class="project-title">Urban Luxe Residence</div>
+          <div class="project-meta">Mumbai • Residential</div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image-wrapper">
+          <img src="images/project2.jpg">
+          <div class="project-overlay"></div>
+        </div>
+        <div class="project-info">
+          <div class="project-title">The Minimal Haven</div>
+          <div class="project-meta">Pune • Residential</div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image-wrapper">
+          <img src="images/project3.jpg">
+          <div class="project-overlay"></div>
+        </div>
+        <div class="project-info">
+          <div class="project-title">Studio Workspace</div>
+          <div class="project-meta">Bangalore • Commercial</div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image-wrapper">
+          <img src="images/project4.jpg">
+          <div class="project-overlay"></div>
+        </div>
+        <div class="project-info">
+          <div class="project-title">Warm Modern Bedroom</div>
+          <div class="project-meta">Chennai • Residential</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INSTAGRAM ================= -->
+<section class="instagram-section">
+  <div class="instagram-container">
+    <div class="instagram-header">
+      <h2>Follow Our Work</h2>
+      <p>@thebakerscompany</p>
+    </div>
+
+    <div class="instagram-grid">
+      <img src="images/insta1.jpg">
+      <img src="images/insta2.jpg">
+      <img src="images/insta3.jpg">
+      <img src="images/insta4.jpg">
+      <img src="images/insta5.jpg">
+      <img src="images/insta6.jpg">
+    </div>
+  </div>
+</section>
+
+<!-- ================= FLOATING CTA ================= -->
+<div class="floating-cta" id="floatingCTA">
+
+  <a href="javascript:void(0)" onclick="openPopup()" class="floating-btn floating-consult">
+    📅 <span>Book Consultation</span>
+  </a>
+
+  <a href="https://wa.me/919597571740?text=Hi%20TBC,%20I%20want%20a%20consultation%20for%20my%20space."
+     onclick="trackWhatsApp()"
+     target="_blank"
+     class="floating-btn floating-whatsapp">
+    💬
+  </a>
+</div>
+
+<!-- ================= POPUP ================= -->
+<div class="popup-overlay" id="contactPopup">
+  <div class="popup-box">
+    <div class="popup-close" onclick="closePopup()">✕</div>
+
+    <h3>Book a Free Consultation</h3>
+    <p>Tell us about your space. We'll get back within 24 hours.</p>
+
+    <form class="popup-form" id="leadForm">
+      <input type="text" placeholder="Your Name" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <input type="email" placeholder="Email Address">
+      <textarea rows="3" placeholder="Project details"></textarea>
+      <button type="submit">Request Consultation</button>
+    </form>
+  </div>
+</div>
+
+<!-- ================= SCRIPTS ================= -->
+<script>
+function openPopup(){document.getElementById('contactPopup').classList.add('active');}
+function closePopup(){document.getElementById('contactPopup').classList.remove('active');}
+
+window.addEventListener('scroll',()=>{
+  if(window.scrollY>300){floatingCTA.classList.add('show')}
+  else{floatingCTA.classList.remove('show')}
+});
+
+function trackWhatsApp(){
+  if(typeof gtag!=="undefined"){
+    gtag("event","whatsapp_click",{event_category:"Lead"});
+  }
+}
+
+document.getElementById("leadForm").addEventListener("submit",function(e){
+  e.preventDefault();
+  const f=this; const d=new FormData();
+
+  d.append("entry.735551418",f[0].value);
+  d.append("entry.930599246",f[1].value);
+  d.append("entry.672421389",f[2].value);
+  d.append("entry.1846593654",f[3].value);
+  d.append("entry.1890531834","Website Popup");
+
+  fetch("https://docs.google.com/forms/d/e/1FAIpQLSeW5xAwG0S5nqVI1KMt8gz8Xejyug2edtm_QlY_edKg1JlaXw/formResponse",
+  {method:"POST",mode:"no-cors",body:d});
+
+  alert("Thank you! TBC will contact you within 24 hours.");
+  closePopup(); f.reset();
+});
+</script>
+
+</body>
+</html>
