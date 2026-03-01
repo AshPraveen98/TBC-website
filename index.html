@@ -40,6 +40,26 @@ gtag('config', 'G-XXXXXXXXXX');
   </div>
 </section>
 
+<!-- ===== TBC NAVBAR ===== -->
+<header class="tbc-navbar" id="tbcNavbar">
+  <div class="tbc-nav-inner">
+
+    <div class="tbc-logo">
+      TBC
+    </div>
+
+    <nav class="tbc-nav-links">
+      <a href="#projects">Projects</a>
+      <a href="#">Services</a>
+      <a href="#">About</a>
+      <a href="javascript:void(0)" onclick="openPopup()" class="tbc-nav-cta">
+        Book Consultation
+      </a>
+    </nav>
+
+  </div>
+</header>
+
 <!-- ================= PROJECTS ================= -->
 <section id="projects" class="projects">
   <div class="projects-container">
@@ -157,6 +177,17 @@ function closePopup(){document.getElementById('contactPopup').classList.remove('
 window.addEventListener('scroll',()=>{
   if(window.scrollY>300){floatingCTA.classList.add('show')}
   else{floatingCTA.classList.remove('show')}
+});
+
+// Navbar scroll effect
+const navbar = document.getElementById('tbcNavbar');
+
+window.addEventListener('scroll', () => {
+  if(window.scrollY > 40){
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
 });
 
 function trackWhatsApp(){
