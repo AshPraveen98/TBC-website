@@ -387,6 +387,114 @@ body{
   line-height:1.6;
 }
 
+/* ===== ABOUT STORY ===== */
+
+.about-story{
+  padding:90px 24px;
+  background:#fff;
+}
+
+.about-inner{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1.1fr 0.9fr;
+  gap:60px;
+  align-items:center;
+}
+
+.about-text h2{
+  font-family:"Playfair Display", serif;
+  color:#3a2f27;
+  font-size:32px;
+  margin-bottom:18px;
+}
+
+.about-text p{
+  color:var(--tbc-muted);
+  line-height:1.7;
+  margin-bottom:14px;
+}
+
+.about-placeholder{
+  width:100%;
+  height:320px;
+  border-radius:14px;
+  background:linear-gradient(135deg,#e8ded3,#d9cbb8);
+  box-shadow:0 25px 60px rgba(0,0,0,0.12);
+}
+
+/* ===== WHY TBC ===== */
+
+.why-tbc{
+  padding:90px 24px;
+  background:var(--tbc-cream-soft);
+}
+
+.why-inner{
+  max-width:1100px;
+  margin:auto;
+  text-align:center;
+}
+
+.why-inner h2{
+  font-family:"Playfair Display", serif;
+  color:#3a2f27;
+  margin-bottom:40px;
+}
+
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:24px;
+}
+
+.why-card{
+  background:#fff;
+  padding:26px;
+  border-radius:14px;
+  text-align:left;
+  box-shadow:0 15px 40px rgba(0,0,0,0.06);
+}
+
+.why-card h4{
+  font-family:"Playfair Display", serif;
+  color:#3a2f27;
+  margin-bottom:6px;
+}
+
+.why-card p{
+  color:var(--tbc-muted);
+  font-size:14px;
+}
+
+/* ===== ABOUT CTA ===== */
+
+.about-cta{
+  padding:80px 24px 110px;
+  background:#fff;
+  text-align:center;
+}
+
+.about-cta-inner h3{
+  font-family:"Playfair Display", serif;
+  color:#3a2f27;
+  margin-bottom:18px;
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:768px){
+
+  .about-inner{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+
+  .why-grid{
+    grid-template-columns:1fr;
+  }
+
 /* ===== MOBILE ===== */
 
 @media(max-width:768px){
@@ -470,6 +578,7 @@ body::before{
   padding: 10px 18px;
   border-radius: 999px;
 }
+
 
 
 
