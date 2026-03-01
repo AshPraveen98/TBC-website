@@ -652,14 +652,29 @@ body::before{
   color: var(--tbc-brown);
 }
 
-/* CTA */
+/* ===== PRIMARY CTA BUTTON ===== */
 
-.tbc-nav-cta{
-  background: var(--tbc-brown);
-  color: #fff !important;
-  padding: 10px 18px;
-  border-radius: 999px;
+.cta-primary{
+  display:inline-block;
+  background:var(--tbc-brown);
+  color:#fff !important;
+  padding:14px 32px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:600;
+  letter-spacing:0.3px;
+  transition:all .25s ease;
+  box-shadow:0 12px 30px rgba(139,106,78,0.25);
 }
+
+.cta-primary:hover{
+  transform:translateY(-2px);
+  background:var(--tbc-brown-dark);
+  box-shadow:0 18px 40px rgba(139,106,78,0.32);
+}
+
+
+
 
 
 
