@@ -654,21 +654,17 @@ body::before{
 /* ===== NUCLEAR CTA FIX ===== */
 
 .about-cta-inner{
-  display:inline-block !important;
-  background:#8b6a4e !important;
-  color:#ffffff !important;
-  padding:14px 32px !important;
-  border-radius:999px !important;
-  text-decoration:none !important;
-  font-weight:600 !important;
-  letter-spacing:0.3px;
-  box-shadow:0 12px 30px rgba(139,106,78,0.25);
+  background:var(--tbc-brown);
+  color:#fff !important;
+  padding:10px 18px;
+  border-radius:999px;
 }
 
 .about-cta-inner:hover{
   background:#6f533d !important;
   transform:translateY(-2px);
 }
+
 
 
 
