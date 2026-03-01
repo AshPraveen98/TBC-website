@@ -306,6 +306,7 @@ body{
 }
 
 .polaroid-card:hover .polaroid-img::before{
+  padding:24px 24px 26px;
   transform:scale(1.06);
 }
 /* Caption */
@@ -314,7 +315,7 @@ body{
   font-family:"Playfair Display", serif;
   color:#3a2f27;
   margin-bottom:6px;
-  font-size:18px;
+  font-size:20px;
   letter-spacing:0.2px;
 }
 
@@ -346,16 +347,19 @@ body{
   gap:28px;
 }
 .service-icon{
-  width:44px;
-  height:44px;
-  border-radius:10px;
-  background:var(--tbc-cream-soft);
+  width:56px;
+  height:56px;
+  border-radius:14px;
+  background:linear-gradient(135deg,#f3ebe3,#e6d7c6);
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:20px;
-  margin-bottom:14px;
-  box-shadow:0 8px 18px rgba(0,0,0,0.06);
+  font-size:26px;
+  margin-bottom:18px;
+  box-shadow:
+    0 10px 24px rgba(0,0,0,0.08),
+    inset 0 1px 0 rgba(255,255,255,0.6);
+  flex-shrink:0;
 }
 
 .service-card{
@@ -466,6 +470,7 @@ body::before{
   padding: 10px 18px;
   border-radius: 999px;
 }
+
 
 
 
