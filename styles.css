@@ -652,23 +652,22 @@ body::before{
   color: var(--tbc-brown);
 }
   
-.cta-primary{
+.about-cta-inner .cta-primary{
   display:inline-block;
-  background:var(--tbc-brown);
-  color:#fff !important;
+  background:#8b6a4e;
+  color:#ffffff !important;
   padding:14px 32px;
   border-radius:999px;
-  text-decoration:none;
+  text-decoration:none !important;
   font-weight:600;
   letter-spacing:0.3px;
   transition:all .25s ease;
   box-shadow:0 12px 30px rgba(139,106,78,0.25);
 }
 
-.cta-primary:hover{
+.about-cta-inner .cta-primary:hover{
   transform:translateY(-2px);
-  background:var(--tbc-brown-dark);
-  box-shadow:0 18px 40px rgba(139,106,78,0.32);
+  background:#6f533d;
 }
 
 
