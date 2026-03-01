@@ -652,23 +652,25 @@ body::before{
   color: var(--tbc-brown);
 }
   
-.about-cta-inner .cta-primary{
-  display:inline-block;
-  background:#8b6a4e;
+/* ===== NUCLEAR CTA FIX ===== */
+
+.about-cta a.cta-primary{
+  display:inline-block !important;
+  background:#8b6a4e !important;
   color:#ffffff !important;
-  padding:14px 32px;
-  border-radius:999px;
+  padding:14px 32px !important;
+  border-radius:999px !important;
   text-decoration:none !important;
-  font-weight:600;
+  font-weight:600 !important;
   letter-spacing:0.3px;
-  transition:all .25s ease;
   box-shadow:0 12px 30px rgba(139,106,78,0.25);
 }
 
-.about-cta-inner .cta-primary:hover{
+.about-cta a.cta-primary:hover{
+  background:#6f533d !important;
   transform:translateY(-2px);
-  background:#6f533d;
 }
+
 
 
 
