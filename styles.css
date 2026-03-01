@@ -561,8 +561,7 @@ body{
 .about-cta-inner h3{
   font-family:"Playfair Display", serif;
   color:#3a2f27;
-  margin-bottom:18px;
-}
+ }
 
 /* ===== MOBILE ===== */
 
@@ -654,7 +653,7 @@ body::before{
   
 /* ===== NUCLEAR CTA FIX ===== */
 
-.about-cta a.cta-primary{
+.about-cta-inner{
   display:inline-block !important;
   background:#8b6a4e !important;
   color:#ffffff !important;
@@ -666,10 +665,11 @@ body::before{
   box-shadow:0 12px 30px rgba(139,106,78,0.25);
 }
 
-.about-cta a.cta-primary:hover{
+.about-cta-inner:hover{
   background:#6f533d !important;
   transform:translateY(-2px);
 }
+
 
 
 
