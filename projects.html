@@ -11,21 +11,22 @@
 
 <body>
 
-<!-- NAVBAR (COPY SAME FROM INDEX) -->
 <header class="tbc-navbar" id="tbcNavbar">
-  <div class="tbc-nav-inner">
-    <div class="tbc-logo">TBC</div>
+  <div class="nav-container">
 
-    <nav class="tbc-nav-links">
+    <div class="logo">
+      TBC The Baker's Company
+    </div>
+
+    <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="projects.html">Projects</a>
       <a href="services.html">Services</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-      <a href="javascript:void(0)" onclick="openPopup()" class="tbc-nav-cta">
-        Book Consultation
-      </a>
+      <a href="#" class="nav-cta">Book Consultation</a>
     </nav>
+
   </div>
 </header>
 
@@ -73,6 +74,19 @@
 
   </div>
 </section>
+<script>
+  window.addEventListener("scroll", function() {
+    const navbar = document.getElementById("tbcNavbar");
 
+    if (window.scrollY > 50) {
+      navbar.style.background = "rgba(248, 244, 236, 0.85)";
+      navbar.style.boxShadow = "0 10px 30px rgba(0,0,0,0.06)";
+    } else {
+      navbar.style.background = "rgba(248, 244, 236, 0.65)";
+      navbar.style.boxShadow = "none";
+    }
+  });
+</script>
 </body>
+
 </html>
