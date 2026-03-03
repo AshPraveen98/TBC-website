@@ -390,8 +390,19 @@ body{
 /* ===== ABOUT STORY ===== */
 
 .about-story{
-  padding:90px 24px;
-  background:#fff;
+  position:relative;
+}
+
+.about-story::after{
+  content:"";
+  position:absolute;
+  bottom:-1px;
+  left:50%;
+  transform:translateX(-50%);
+  width:120px;
+  height:2px;
+  background:#d6c7b8;
+  border-radius:2px;
 }
 
 .about-inner{
@@ -406,8 +417,9 @@ body{
 .about-text h2{
   font-family:"Playfair Display", serif;
   color:#3a2f27;
-  font-size:32px;
-  margin-bottom:18px;
+  font-size:38px;
+  line-height:1.2;
+  margin-bottom:22px;
 }
 
 .about-text p{
@@ -509,8 +521,12 @@ body{
 /* ===== WHY TBC ===== */
 
 .why-tbc{
-  padding:90px 24px;
-  background:var(--tbc-cream-soft);
+  padding:110px 24px;
+  background:linear-gradient(
+    to bottom,
+    #f5efe8 0%,
+    #efe6dc 100%
+  );
 }
 
 .why-inner{
@@ -522,7 +538,8 @@ body{
 .why-inner h2{
   font-family:"Playfair Display", serif;
   color:#3a2f27;
-  margin-bottom:40px;
+  font-size:34px;
+  margin-bottom:50px;
 }
 
 .why-grid{
@@ -532,11 +549,20 @@ body{
 }
 
 .why-card{
-  background:#fff;
-  padding:26px;
-  border-radius:14px;
+  background:#ffffff;
+  padding:30px;
+  border-radius:18px;
   text-align:left;
-  box-shadow:0 15px 40px rgba(0,0,0,0.06);
+  box-shadow:
+    0 18px 45px rgba(0,0,0,0.06),
+    0 2px 6px rgba(0,0,0,0.03);
+  transition:all .3s ease;
+}
+
+.why-card:hover{
+  transform:translateY(-6px);
+  box-shadow:
+    0 28px 60px rgba(0,0,0,0.10);
 }
 
 .why-card h4{
@@ -664,6 +690,7 @@ body::before{
   background:#6f533d !important;
   transform:translateY(-2px);
 }
+
 
 
 
