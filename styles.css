@@ -270,18 +270,20 @@ body {
 
 .popup-box h3 {
   font-family: 'Playfair Display', serif;
-  font-size: 30px;
-  font-weight: 500;
-  margin-bottom: 12px;
-  color: #3e2a1d;
-  letter-spacing: 0.3px;
+  font-size: 34px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #3b2a1d;
+  margin-bottom: 10px;
 }
 
 .popup-box p {
+  font-family: 'Inter', sans-serif;
   font-size: 15px;
-  color: #7b5d49;
-  margin-bottom: 35px;
-  line-height: 1.6;
+  font-weight: 400;
+  color: #8a6f59;
+  margin-bottom: 40px;
+  line-height: 1.7;
 }
 
 .popup-form {
@@ -297,7 +299,8 @@ body {
   border: 1px solid #e6d8c8;
   background: rgba(255,255,255,0.85);
   font-size: 14px;
-  font-family: inherit;
+  font-family: 'Inter', sans-serif;
+  color: #4b3a2b;
   transition: all 0.3s ease;
 }
 
@@ -320,13 +323,14 @@ body {
 }
 
 .popup-form button {
-  margin-top: 10px;
-  padding: 16px;
+  margin-top: 15px;
+  padding: 18px;
   border-radius: 60px;
   border: none;
   font-size: 14px;
   font-weight: 500;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.6px;
+  font-family: 'Inter', sans-serif;
   background: #8b6a4e;
   color: #fff;
   cursor: pointer;
@@ -840,6 +844,7 @@ body::before{
   cursor: pointer;
   z-index: 10;
 }
+
 
 
 
