@@ -152,11 +152,9 @@
 <section class="about-cta">
   <div class="about-cta-inner">
     <h3>Let’s design a home you’ll love living in.</h3>
-   <a href="#" class="nav-cta" id="openConsult">Book Consultation</a>
-  <a>📅 Book Consultation</a>
-  </a>
-    </a>
-  </div>
+   <a href="#" class="nav-cta" id="openConsult">📅 Book Consultation</a>
+   </a>
+      </div>
 </section>
 <script>
   window.addEventListener("scroll", function() {
@@ -177,52 +175,35 @@ document.getElementById("consultBtn").addEventListener("click", function(e){
   document.getElementById("consultationModal").style.display = "flex";
 });
 </script>
-<!-- ===== CONSULTATION MODAL ===== -->
+<!-- CONSULTATION MODAL -->
 <div id="consultationModal" class="consult-modal">
-
   <div class="consult-modal-content">
-
-    <span class="consult-close" id="closeConsult">&times;</span>
-
-    <h2>Book a Consultation</h2>
+    <span class="consult-close">&times;</span>
 
     <iframe 
-      src="https://docs.google.com/forms/d/e/1FAIpQLSeW5xAwG0S5nqVI1KMt8gz8Xejyug2edtm_QlY_edKg1JlaXw/viewform?embedded=true"
-      width="100%" 
-      height="500" 
-      frameborder="0">
-      Loading…
+      src="https://docs.google.com/forms/d/e/1FAIpQLSeW5xAwG0S5nqVI1KMt8gz8Xejyug2edtm_QlY_edKg1JlaXw/viewform?embedded=true">
     </iframe>
 
   </div>
-
 </div>
+
 <script>
 const modal = document.getElementById("consultationModal");
-const openBtn = document.getElementById("openConsult");
-const closeBtn = document.getElementById("closeConsult");
+const openBtn = document.getElementById("bookConsultBtn");
+const closeBtn = document.querySelector(".consult-close");
 
-if(openBtn){
-  openBtn.addEventListener("click", function(e){
-    e.preventDefault();
-    modal.style.display = "flex";
-  });
-}
+openBtn.onclick = () => modal.classList.add("active");
+closeBtn.onclick = () => modal.classList.remove("active");
 
-if(closeBtn){
-  closeBtn.addEventListener("click", function(){
-    modal.style.display = "none";
-  });
-}
-
-window.addEventListener("click", function(e){
-  if(e.target === modal){
-    modal.style.display = "none";
+window.onclick = (e) => {
+  if (e.target === modal) {
+    modal.classList.remove("active");
   }
-});
+};
 </script>
 </body>
 </html>
+
 
 
 
