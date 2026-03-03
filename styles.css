@@ -693,6 +693,62 @@ body::before{
 
 /* Links */
 
+/* ===== FULL SCREEN GLASS MODAL ===== */
+
+.consult-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  z-index: 2000;
+}
+
+.consult-modal-content {
+  background: rgba(248, 244, 236, 0.95);
+  width: 90%;
+  max-width: 700px;
+
+  padding: 40px;
+  border-radius: 20px;
+
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+
+  position: relative;
+  animation: fadeUp 0.35s ease;
+}
+
+.consult-modal-content h2 {
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: var(--tbc-brown);
+}
+
+.consult-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 
 
