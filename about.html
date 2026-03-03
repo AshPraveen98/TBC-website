@@ -183,7 +183,6 @@ document.getElementById("bookConsultBtn").addEventListener("click", function(e) 
 <div id="consultationModal" class="consult-modal">
   <div class="consult-modal-content">
     <span class="consult-close">&times;</span>
-
     <iframe 
       src="https://docs.google.com/forms/d/e/1FAIpQLSeW5xAwG0S5nqVI1KMt8gz8Xejyug2edtm_QlY_edKg1JlaXw/viewform?embedded=true">
        width="100%" 
@@ -195,21 +194,29 @@ document.getElementById("bookConsultBtn").addEventListener("click", function(e) 
 </div>
 
 <script>
-const modal = document.getElementById("consultationModal");
-const openBtn = document.getElementById("bookConsultBtn");
+const modal = document.querySelector(".consult-modal");
+const btn = document.getElementById("bookConsultBtn");
 const closeBtn = document.querySelector(".consult-close");
 
-openBtn.onclick = () => modal.classList.add("active");
-closeBtn.onclick = () => modal.classList.remove("active");
+btn.addEventListener("click", function(e) {
+  e.preventDefault();
+  modal.classList.add("active");
+});
 
-window.onclick = (e) => {
+closeBtn.addEventListener("click", function() {
+  modal.classList.remove("active");
+});
+
+window.addEventListener("click", function(e) {
   if (e.target === modal) {
     modal.classList.remove("active");
   }
-};
+});
+  
 </script>
 </body>
 </html>
+
 
 
 
