@@ -16,7 +16,7 @@ body {
   background: var(--tbc-cream);
   color: var(--tbc-text);
 
-  padding-top: 110px;
+  padding-top: 90px;
 }
 
 /* HERO */
@@ -85,16 +85,29 @@ body {
   width: 100%;
   z-index: 999;
 
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-  transition: all 0.3s ease;
+  padding: 22px 60px;
+
+  background: rgba(248, 244, 236, 0.65); /* Cream glass */
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+
+  transition: all 0.35s ease;
 }
 
 .tbc-navbar.scrolled {
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-  padding: 12px 0;
+  background: rgba(248, 244, 236, 0.82);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  padding: 16px 60px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .tbc-nav-inner{
@@ -103,7 +116,7 @@ body {
   display:flex;
   align-items:center;
   justify-content:space-between;
-}
+ }
 
 /* Logo */
 
@@ -395,7 +408,7 @@ body {
 
 .about-story{
   position:relative;
-  padding-top:140px;
+  padding: 120px 0 100px;
 }
 
 .about-story::after{
@@ -599,10 +612,17 @@ body {
   text-align:center;
 }
 
-.about-cta-inner h3{
-  font-family:"Playfair Display", serif;
-  color:#3a2f27;
- }
+.about-cta-inner{
+  background:var(--tbc-brown);
+  color:#fff !important;
+  padding:10px 18px;
+  border-radius:999px;
+}
+
+.about-cta-inner:hover{
+  background:#6f533d !important;
+  transform:translateY(-2px);
+}
 
 /* ===== MOBILE ===== */
 
@@ -686,6 +706,9 @@ body::before{
   color: var(--tbc-text);
   font-size: 15px;
   transition: .25s;
+  margin-left: 28px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
 }
 
 .tbc-nav-links a:hover{
@@ -694,17 +717,7 @@ body::before{
   
 /* ===== NUCLEAR CTA FIX ===== */
 
-.about-cta-inner{
-  background:var(--tbc-brown);
-  color:#fff !important;
-  padding:10px 18px;
-  border-radius:999px;
-}
 
-.about-cta-inner:hover{
-  background:#6f533d !important;
-  transform:translateY(-2px);
-}
 
 
 
