@@ -11,20 +11,22 @@
 *{
   scroll-behavior: smooth;
 }
-body{
+body {
   font-family: Inter, sans-serif;
   background: var(--tbc-cream);
   color: var(--tbc-text);
+
+  padding-top: 110px;
 }
 
 /* HERO */
 .hero{
   position: relative;
-  min-height: 88vh;   /* was fixed height */
+  min-height: 88vh;   
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 110px; /* space for navbar */
+  padding-top: 110px; 
   padding-bottom: 60px;
   color: #fff;
 }
@@ -703,6 +705,7 @@ body::before{
   background:#6f533d !important;
   transform:translateY(-2px);
 }
+
 
 
 
