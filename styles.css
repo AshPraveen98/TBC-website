@@ -77,46 +77,53 @@ body {
   transform: translateY(-2px);
 }
 
-/* ================= NAVBAR ================= */
+/* ===== NAVBAR SYSTEM ===== */
 
 .tbc-navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 999;
+  z-index: 1000;
+
+  background: rgba(248, 244, 236, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+
+  transition: all 0.3s ease;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 40px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  padding: 22px 60px;
-
-  background: rgba(248, 244, 236, 0.65); /* Cream glass */
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-
-  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
-
-  transition: all 0.35s ease;
 }
 
-.tbc-navbar.scrolled {
-  background: rgba(248, 244, 236, 0.82);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-
-  padding: 16px 60px;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+.logo {
+  font-family: serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--tbc-brown);
 }
 
-.tbc-nav-inner{
-  max-width:1200px;
-  margin:auto;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
- }
+.nav-links a {
+  margin-left: 28px;
+  text-decoration: none;
+  color: var(--tbc-text);
+  font-weight: 500;
+}
+
+.nav-cta {
+  background: var(--tbc-brown);
+  color: #fff !important;
+  padding: 10px 22px;
+  border-radius: 30px;
+}
 
 /* Logo */
 
@@ -657,31 +664,6 @@ body::before{
   opacity:.4;
   z-index:0;
 }
-/* ================= NAVBAR ================= */
-
-.tbc-navbar{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  padding: 18px 24px;
-  transition: all .35s ease;
-}
-
-.tbc-navbar.scrolled{
-  background: rgba(246,239,231,0.92);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-}
-
-.tbc-nav-inner{
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 
 /* Logo */
 
@@ -694,28 +676,6 @@ body::before{
 }
 
 /* Links */
-
-.tbc-nav-links{
-  display: flex;
-  gap: 28px;
-  align-items: center;
-}
-
-.tbc-nav-links a{
-  text-decoration: none;
-  color: var(--tbc-text);
-  font-size: 15px;
-  transition: .25s;
-  margin-left: 28px;
-  font-weight: 500;
-  letter-spacing: 0.3px;
-}
-
-.tbc-nav-links a:hover{
-  color: var(--tbc-brown);
-}
-  
-/* ===== NUCLEAR CTA FIX ===== */
 
 
 
