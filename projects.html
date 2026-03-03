@@ -24,7 +24,9 @@
       <a href="services.html">Services</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-      <a href="#" class="nav-cta">Book Consultation</a>
+      <a href="javascript:void(0)" onclick="openPopup()" class="tbc-nav-cta">
+         Book Consultation
+    </a>
     </nav>
 
   </div>
@@ -87,6 +89,52 @@
     }
   });
 </script>
+  <!-- ================= POPUP ================= -->
+<div class="popup-overlay" id="contactPopup">
+  <div class="popup-box">
+    <div class="popup-close" onclick="closePopup()">✕</div>
+
+    <h3>Book a Free Consultation</h3>
+    <p>Tell us about your space. We'll get back within 24 hours.</p>
+
+    <form class="popup-form" id="leadForm">
+      <input type="text" placeholder="Your Name" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <input type="email" placeholder="Email Address">
+      <textarea rows="3" placeholder="Project details"></textarea>
+      <button type="submit">Request Consultation</button>
+    </form>
+  </div>
+</div>
+  <script>
+function openPopup(){
+  document.getElementById('contactPopup').classList.add('active');
+}
+
+function closePopup(){
+  document.getElementById('contactPopup').classList.remove('active');
+}
+
+document.getElementById("leadForm").addEventListener("submit",function(e){
+  e.preventDefault();
+  const f=this; 
+  const d=new FormData();
+
+  d.append("entry.735551418",f[0].value);
+  d.append("entry.930599246",f[1].value);
+  d.append("entry.672421389",f[2].value);
+  d.append("entry.1846593654",f[3].value);
+  d.append("entry.1890531834","Website Popup");
+
+  fetch("https://docs.google.com/forms/d/e/1FAIpQLSeW5xAwG0S5nqVI1KMt8gz8Xejyug2edtm_QlY_edKg1JlaXw/formResponse",
+  {method:"POST",mode:"no-cors",body:d});
+
+  alert("Thank you! TBC will contact you within 24 hours.");
+  closePopup(); 
+  f.reset();
+});
+</script>
 </body>
 
 </html>
+
