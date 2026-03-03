@@ -913,6 +913,71 @@ body::before{
   cursor: pointer;
   z-index: 10;
 }
+/* ================= FOOTER ================= */
+
+.site-footer {
+  background: #3e2a1d;
+  color: #f5ede4;
+  padding-top: 80px;
+}
+
+.footer-container {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 50px;
+  padding-bottom: 60px;
+}
+
+.footer-brand h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.footer-brand p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  font-size: 15px;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.footer-links a {
+  display: block;
+  text-decoration: none;
+  color: #f5ede4;
+  font-size: 14px;
+  margin-bottom: 10px;
+  opacity: 0.75;
+  transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  transform: translateX(4px);
+}
+
+.footer-contact p {
+  font-size: 14px;
+  margin-bottom: 10px;
+  opacity: 0.75;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 25px 0;
+  background: #352317;
+  font-size: 13px;
+  opacity: 0.7;
+}
 
 
 
