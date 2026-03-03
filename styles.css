@@ -612,6 +612,11 @@ body {
 }
 
 /* ===== CLEAN CTA BAR ===== */
+.about-cta {
+  position: relative;
+  z-index: 2;
+  margin-top: 80px;
+}
 .about-cta-inner h3 {
   color: #fff;
   font-size: 28px;
@@ -727,6 +732,7 @@ body::before{
   cursor: pointer;
   z-index: 10;
 }
+
 
 
 
