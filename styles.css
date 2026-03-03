@@ -620,11 +620,6 @@ body {
   margin: 60px auto;
   max-width: 1200px;
 }
-
-.about-cta-inner {
-  text-align: center;
-}
-
 .about-cta h3 {
   color: #fff;
   margin-bottom: 16px;
@@ -695,59 +690,47 @@ body::before{
 
 /* ===== FULL SCREEN GLASS MODAL ===== */
 
+/* CONSULTATION MODAL */
+
 .consult-modal {
   position: fixed;
   inset: 0;
-  display: none;
-
-  align-items: center;
-  justify-content: center;
-
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
 
-  z-index: 2000;
+.consult-modal.active {
+  display: flex;
 }
 
 .consult-modal-content {
-  background: rgba(248, 244, 236, 0.95);
   width: 90%;
-  max-width: 700px;
-
-  padding: 40px;
-  border-radius: 20px;
-
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
-
+  max-width: 900px;
+  height: 85vh;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
   position: relative;
-  animation: fadeUp 0.35s ease;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
 }
 
-.consult-modal-content h2 {
-  margin-bottom: 20px;
-  font-weight: 600;
-  color: var(--tbc-brown);
+.consult-modal-content iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 .consult-close {
   position: absolute;
-  top: 15px;
-  right: 20px;
-
-  font-size: 24px;
+  top: 14px;
+  right: 18px;
+  font-size: 28px;
   cursor: pointer;
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  z-index: 10;
 }
 
 
