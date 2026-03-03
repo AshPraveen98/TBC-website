@@ -68,8 +68,21 @@
 
   </div>
 </section>
+<script>
+  window.addEventListener("scroll", function() {
+    const navbar = document.getElementById("tbcNavbar");
 
+    if (window.scrollY > 50) {
+      navbar.style.background = "rgba(248, 244, 236, 0.85)";
+      navbar.style.boxShadow = "0 10px 30px rgba(0,0,0,0.06)";
+    } else {
+      navbar.style.background = "rgba(248, 244, 236, 0.65)";
+      navbar.style.boxShadow = "none";
+    }
+  });
+</script>
 </body>
+
 
 
 
