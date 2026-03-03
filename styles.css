@@ -611,24 +611,40 @@ body {
   font-size:14px;
 }
 
-/* ===== ABOUT CTA ===== */
+/* ===== CLEAN CTA BAR ===== */
 
-.about-cta{
-  padding:80px 24px 110px;
-  background:#fff;
-  text-align:center;
+.about-cta {
+  padding: 60px 20px;
+  background: var(--tbc-brown);
+  border-radius: 80px;
+  margin: 60px auto;
+  max-width: 1200px;
 }
 
-.about-cta-inner{
-  background:var(--tbc-brown);
-  color:#fff !important;
-  padding:10px 18px;
-  border-radius:999px;
+.about-cta-inner {
+  text-align: center;
 }
 
-.about-cta-inner:hover{
-  background:#6f533d !important;
-  transform:translateY(-2px);
+.about-cta h3 {
+  color: #fff;
+  margin-bottom: 16px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.about-cta a {
+  display: inline-block;
+  background: #fff;
+  color: var(--tbc-brown);
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.about-cta a:hover {
+  background: #f5f1ea;
 }
 
 /* ===== MOBILE ===== */
@@ -676,6 +692,7 @@ body::before{
 }
 
 /* Links */
+
 
 
 
