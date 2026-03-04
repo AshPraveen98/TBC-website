@@ -881,7 +881,7 @@ body::before{
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 80px;
+  gap: 50px;
   flex-wrap: wrap;
 }
 
@@ -940,13 +940,10 @@ body::before{
 
 .footer-bottom {
   max-width: 1200px;
-  margin: 60px auto 0 auto;
+  margin: 40px auto 0 auto;
   padding-top: 25px;
   border-top: 1px solid rgba(0,0,0,0.06);
   text-align: center;
   font-size: 13px;
   color: #a58e7c;
 }
-
-
-
