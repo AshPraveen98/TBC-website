@@ -12,6 +12,7 @@
   scroll-behavior: smooth;
 }
 body {
+  border: 10px solid red;
   font-family: Inter, sans-serif;
   background: var(--tbc-cream);
   color: var(--tbc-text);
@@ -915,6 +916,7 @@ body::before{
   font-size: 13px;
   color: rgba(255,255,255,0.6);
 }
+
 
 
 
