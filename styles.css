@@ -873,65 +873,71 @@ body::before{
 ========================= */
 
 .site-footer {
-  background: #f3ece3;
-  padding: 70px 8% 40px;
-  border-top: 1px solid #e6d8c8;
+  background: #f4ede6;
+  padding: 70px 8%;
+  border-top: 1px solid rgba(0,0,0,0.05);
 }
 
 .footer-container {
+  max-width: 1200px;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   gap: 60px;
   flex-wrap: wrap;
 }
 
-.footer-brand h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 22px;
-  color: #3e2a1d;
-  margin-bottom: 10px;
+.footer-col {
+  flex: 1;
+  min-width: 240px;
 }
 
-.footer-brand p {
+.footer-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #3e2a1d;
+}
+
+.footer-tagline {
   font-size: 14px;
   color: #7b5d49;
-  max-width: 260px;
+  margin-bottom: 25px;
   line-height: 1.6;
 }
 
-.footer-links h4,
-.footer-contact h4 {
+.footer-col h4 {
   font-size: 14px;
-  letter-spacing: 1px;
   text-transform: uppercase;
-  color: #8b6a4e;
+  letter-spacing: 1px;
   margin-bottom: 18px;
+  color: #3e2a1d;
 }
 
-.footer-links a {
+.footer-col a {
   display: block;
-  margin-bottom: 10px;
-  font-size: 14px;
-  color: #5e4633;
   text-decoration: none;
-  transition: color 0.3s ease;
+  color: #7b5d49;
+  font-size: 14px;
+  margin-bottom: 10px;
+  transition: 0.3s ease;
 }
 
-.footer-links a:hover {
+.footer-col a:hover {
   color: #8b6a4e;
 }
 
 .footer-contact p {
   font-size: 14px;
   margin-bottom: 8px;
-  color: #5e4633;
+  color: #7b5d49;
 }
 
 .footer-bottom {
-  text-align: center;
   margin-top: 50px;
-  padding-top: 20px;
-  border-top: 1px solid #e6d8c8;
+  text-align: center;
   font-size: 13px;
-  color: #9b8776;
+  color: #a58e7c;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  padding-top: 20px;
 }
