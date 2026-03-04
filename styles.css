@@ -324,29 +324,7 @@ body {
 .floating-whatsapp:hover{
   transform: translateY(-2px) scale(1.05);
 }
-/* ===== CONSULTATION POPUP ===== */
-
-.popup-overlay{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100vw;
-  height:100vh;
-
-  background:rgba(0,0,0,0.25);
-  backdrop-filter:blur(4px);
-
-  opacity:0;
-  visibility:hidden;
-
-  z-index:9999;
-  transition:opacity .25s ease;
-}
-
-.popup-overlay.active{
-  opacity:1;
-  visibility:visible;
-}
+/* ===== CONSULTATION MODAL ===== */
 
 .popup-box{
   position:fixed;
@@ -354,122 +332,97 @@ body {
   left:50%;
   transform:translate(-50%,-50%);
 
-  width:90%;
-  max-width:440px;
+  width:900px;
+  max-width:92%;
 
-  background:#ffffff;
-  border-radius:18px;
+  background:#fff;
+  border-radius:22px;
 
-  padding:40px 36px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
 
-  box-shadow:0 40px 90px rgba(0,0,0,0.25);
+  overflow:hidden;
 
-  z-index:10000;
+  box-shadow:0 40px 100px rgba(0,0,0,0.25);
 }
 
-@keyframes popupRise {
-  from {
-    opacity: 0;
-    transform: translateY(35px) scale(0.97);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
+/* LEFT PANEL */
+
+.popup-left{
+  padding:60px 50px;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(139,106,78,0.25), transparent 45%),
+    radial-gradient(circle at 80% 70%, rgba(165,90,70,0.18), transparent 50%),
+    linear-gradient(135deg,#f7f1ea,#e9ddd1);
 }
 
-.popup-close {
-  position: absolute;
-  top: 22px;
-  right: 26px;
-  font-size: 20px;
-  cursor: pointer;
-  color: #6b4c36;
-  opacity: 0.7;
-  transition: 0.25s ease;
+.popup-brand{
+  font-family:"Playfair Display", serif;
+  font-size:24px;
+  margin-bottom:20px;
+  color:#3a2f27;
 }
 
-.popup-close:hover {
-  opacity: 1;
-  transform: rotate(90deg);
+.popup-left h3{
+  font-family:"Playfair Display", serif;
+  font-size:28px;
+  margin-bottom:16px;
+  color:#3a2f27;
 }
 
-.popup-box h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 34px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  color: #3b2a1d;
-  margin-bottom: 10px;
+.popup-left p{
+  color:#6b5a4c;
+  line-height:1.6;
 }
 
-.popup-box p {
-  font-family: 'Inter', sans-serif;
-  font-size: 15px;
-  font-weight: 400;
-  color: #8a6f59;
-  margin-bottom: 40px;
-  line-height: 1.7;
+.popup-materials{
+  margin-top:40px;
+  font-size:12px;
+  letter-spacing:3px;
+  color:#8b6a4e;
+  text-transform:uppercase;
+}
+
+/* RIGHT PANEL */
+
+.popup-right{
+  padding:50px 40px;
+  position:relative;
+}
+
+.popup-form{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
 }
 
 .popup-form input,
-.popup-form textarea {
-  padding: 16px 18px;
-  border-radius: 18px;
-  border: 1px solid #e6d8c8;
-  background: rgba(255,255,255,0.85);
-  font-size: 14px;
-  font-family: 'Inter', sans-serif;
-  color: #4b3a2b;
-  transition: all 0.3s ease;
+.popup-form textarea{
+  padding:14px 16px;
+  border-radius:12px;
+  border:1px solid #e4d7c8;
+  font-size:14px;
 }
 
-.popup-form textarea {
-  resize: none;
+.popup-form button{
+  margin-top:10px;
+  padding:16px;
+  border-radius:40px;
+  border:none;
+  background:#8b6a4e;
+  color:#fff;
+  cursor:pointer;
 }
-
-.popup-form input::placeholder,
-.popup-form textarea::placeholder {
-  color: #b19b87;
-}
-
-.popup-form input:focus,
-.popup-form textarea:focus {
-  outline: none;
-  border-color: #8b6a4e;
-  box-shadow: 
-    0 0 0 4px rgba(139,106,78,0.12),
-    0 8px 20px rgba(0,0,0,0.05);
-}
-
-.popup-form button {
-  margin-top: 15px;
-  padding: 18px;
-  border-radius: 60px;
-  border: none;
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0.6px;
-  font-family: 'Inter', sans-serif;
-  background: #8b6a4e;
-  color: #fff;
-  cursor: pointer;
-  transition: all 0.35s ease;
-}
-
-.popup-form button:hover {
-  background: #6f533c;
-  transform: translateY(-3px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
-}
-
 /* MOBILE */
 @media(max-width:768px){
-  .projects-grid{grid-template-columns:1fr}
-  .instagram-grid{grid-template-columns:repeat(3,1fr)}
+.popup-box{
+  grid-template-columns:1fr;
 }
-.projects-header p{
-  color: var(--tbc-muted);
+.popup-left{
+  padding:40px 30px;
+}
+.popup-right{
+  padding:30px;
 }
 /* ===== INNER PAGE HERO ===== */
 
@@ -927,11 +880,9 @@ body {
 @keyframes pageFadeIn {
   from {
     opacity: 0;
-    transform: translateY(8px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
@@ -1032,6 +983,7 @@ body {
   font-size: 13px;
   color: #a58e7c;
 }
+
 
 
 
