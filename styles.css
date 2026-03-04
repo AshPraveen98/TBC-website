@@ -869,75 +869,71 @@ body::before{
 }
 
 /* =========================
-   UNIVERSAL FOOTER
+   FORCE FOOTER STYLE FIX
 ========================= */
 
 .site-footer {
-  background: #f4ede6;
-  padding: 70px 8%;
-  border-top: 1px solid rgba(0,0,0,0.05);
+  background: #f4ede6 !important;
+  padding: 80px 8% !important;
+  border-top: 1px solid rgba(0,0,0,0.05) !important;
 }
 
 .footer-container {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  gap: 60px;
-  flex-wrap: wrap;
+  display: flex !important;
+  justify-content: space-between !important;
+  gap: 60px !important;
+  flex-wrap: wrap !important;
+  max-width: 1200px !important;
+  margin: auto !important;
 }
 
-.footer-col {
-  flex: 1;
-  min-width: 240px;
+.footer-brand h3 {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 22px !important;
+  color: #3e2a1d !important;
+  margin-bottom: 10px !important;
 }
 
-.footer-logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 22px;
-  margin-bottom: 12px;
-  color: #3e2a1d;
+.footer-brand p {
+  font-size: 14px !important;
+  color: #7b5d49 !important;
+  max-width: 260px !important;
+  line-height: 1.6 !important;
 }
 
-.footer-tagline {
-  font-size: 14px;
-  color: #7b5d49;
-  margin-bottom: 25px;
-  line-height: 1.6;
+.footer-links h4,
+.footer-contact h4 {
+  font-size: 14px !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+  margin-bottom: 18px !important;
+  color: #3e2a1d !important;
 }
 
-.footer-col h4 {
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 18px;
-  color: #3e2a1d;
+.footer-links a {
+  display: block !important;
+  text-decoration: none !important;
+  color: #7b5d49 !important;
+  font-size: 14px !important;
+  margin-bottom: 10px !important;
+  transition: 0.3s ease !important;
 }
 
-.footer-col a {
-  display: block;
-  text-decoration: none;
-  color: #7b5d49;
-  font-size: 14px;
-  margin-bottom: 10px;
-  transition: 0.3s ease;
-}
-
-.footer-col a:hover {
-  color: #8b6a4e;
+.footer-links a:hover {
+  color: #8b6a4e !important;
 }
 
 .footer-contact p {
-  font-size: 14px;
-  margin-bottom: 8px;
-  color: #7b5d49;
+  font-size: 14px !important;
+  margin-bottom: 8px !important;
+  color: #7b5d49 !important;
 }
 
 .footer-bottom {
-  margin-top: 50px;
-  text-align: center;
-  font-size: 13px;
-  color: #a58e7c;
-  border-top: 1px solid rgba(0,0,0,0.05);
-  padding-top: 20px;
+  margin-top: 50px !important;
+  text-align: center !important;
+  font-size: 13px !important;
+  color: #a58e7c !important;
+  border-top: 1px solid rgba(0,0,0,0.05) !important;
+  padding-top: 20px !important;
 }
