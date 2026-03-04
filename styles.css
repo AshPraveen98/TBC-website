@@ -864,6 +864,25 @@ body::before{
   color: var(--tbc-brown);
   letter-spacing: 1px;
 }
+/* =========================
+   PAGE TRANSITION
+========================= */
+
+body {
+  opacity: 0;
+  animation: pageFadeIn 0.6s ease forwards;
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 /* =========================
    FOOTER – CLEAN VERSION
@@ -873,6 +892,22 @@ body::before{
   background: #f4ede6;
   padding: 60px 8% 35px 8%;
   margin-top: 90px;
+  position: relative;
+}
+
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(0,0,0,0.08),
+    transparent
+  );
 }
 
 .footer-container {
@@ -892,9 +927,8 @@ body::before{
 
 .footer-brand h3 {
   font-family: 'Playfair Display', serif;
-  font-size: 22px;
-  color: #3e2a1d;
-  margin-bottom: 14px;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .footer-brand p {
@@ -947,3 +981,4 @@ body::before{
   font-size: 13px;
   color: #a58e7c;
 }
+
