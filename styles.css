@@ -22,7 +22,7 @@ body {
 /* HERO */
 .hero{
   position: relative;
-  min-height: 88vh;   
+  min-height: 92vh;   
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,31 +33,47 @@ body {
 .hero-bg{
   position:absolute;
   inset:0;
+  overflow:hidden;
 
   background:
-    linear-gradient(
-      135deg,
-      rgba(214,190,165,0.35),
-      rgba(232,220,206,0.45)
-    ),
+  /* TIMBER warmth */
+  radial-gradient(
+    circle at 25% 30%,
+    rgba(150,110,80,0.20),
+    transparent 45%
+  ),
 
-    radial-gradient(
-      circle at 25% 35%,
-      rgba(139,106,78,0.22),
-      transparent 45%
-    ),
+  /* BRICK depth */
+  radial-gradient(
+    circle at 70% 65%,
+    rgba(165,90,70,0.16),
+    transparent 50%
+  ),
 
-    radial-gradient(
-      circle at 75% 70%,
-      rgba(120,90,70,0.18),
-      transparent 50%
-    ),
+  /* CONCRETE neutral base */
+  linear-gradient(
+    135deg,
+    #f7f1ea 0%,
+    #e9ddd1 100%
+  );
+}
+.hero-bg::after{
+  content:"";
+  position:absolute;
+  inset:-20%;
+  background:
+    radial-gradient(circle at 30% 40%, rgba(0,0,0,0.04), transparent 60%),
+    radial-gradient(circle at 80% 20%, rgba(0,0,0,0.03), transparent 55%);
+  animation: heroDrift 20s ease-in-out infinite alternate;
+}
 
-    linear-gradient(
-      135deg,
-      #f6efe7 0%,
-      #eadccf 100%
-    );
+@keyframes heroDrift{
+  from{
+    transform: translateY(-10px);
+  }
+  to{
+    transform: translateY(10px);
+  }
 }
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.25),rgba(0,0,0,.45))}
 .hero-content{
@@ -1002,5 +1018,6 @@ body {
   font-size: 13px;
   color: #a58e7c;
 }
+
 
 
