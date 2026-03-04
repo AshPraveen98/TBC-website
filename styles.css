@@ -324,10 +324,14 @@ body {
 .floating-whatsapp:hover{
   transform: translateY(-2px) scale(1.05);
 }
-/* ===== TBC CONSULT POPUP ===== */
+/* ===== CONSULTATION POPUP ===== */
+
 .popup-overlay{
   position:fixed;
-  inset:0;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
 
   background:rgba(0,0,0,0.25);
   backdrop-filter:blur(4px);
@@ -335,7 +339,7 @@ body {
   opacity:0;
   visibility:hidden;
 
- z-index:10000;
+  z-index:9999;
   transition:opacity .25s ease;
 }
 
@@ -346,22 +350,21 @@ body {
 
 .popup-box{
   position:fixed;
-
-  top:50vh;
-  left:50vw;
+  top:50%;
+  left:50%;
   transform:translate(-50%,-50%);
 
   width:90%;
   max-width:440px;
 
-  background:#fff;
+  background:#ffffff;
   border-radius:18px;
 
   padding:40px 36px;
 
-  box-shadow:0 30px 80px rgba(0,0,0,0.25);
+  box-shadow:0 40px 90px rgba(0,0,0,0.25);
 
-  z-index:10001;
+  z-index:10000;
 }
 
 @keyframes popupRise {
@@ -1029,6 +1032,7 @@ body {
   font-size: 13px;
   color: #a58e7c;
 }
+
 
 
 
