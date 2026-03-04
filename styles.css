@@ -335,8 +335,8 @@ body {
   opacity:0;
   visibility:hidden;
 
-  z-index:9999;
-  transition:opacity .3s ease;
+ z-index:10000;
+  transition:opacity .25s ease;
 }
 
 .popup-overlay.active{
@@ -1029,6 +1029,7 @@ body {
   font-size: 13px;
   color: #a58e7c;
 }
+
 
 
 
