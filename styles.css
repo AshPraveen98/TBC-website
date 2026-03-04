@@ -75,7 +75,15 @@ body {
     transform: translateY(10px);
   }
 }
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.25),rgba(0,0,0,.45))}
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to bottom,
+    rgba(80,55,40,0.08),
+    rgba(80,55,40,0.20)
+  );
+}
 .hero-content{
   position: relative;
   text-align: center;
@@ -1018,6 +1026,7 @@ body {
   font-size: 13px;
   color: #a58e7c;
 }
+
 
 
 
