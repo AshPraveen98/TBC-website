@@ -325,13 +325,29 @@ body {
   transform: translateY(-2px) scale(1.05);
 }
 /* ===== CONSULTATION MODAL ===== */
-
-.popup-box{
+.popup-overlay{
   position:fixed;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
+  inset:0;
 
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:rgba(0,0,0,0.25);
+  backdrop-filter:blur(4px);
+
+  opacity:0;
+  visibility:hidden;
+
+  z-index:9999;
+  transition:opacity .25s ease;
+}
+
+.popup-overlay.active{
+  opacity:1;
+  visibility:visible;
+}
+.popup-box{
   width:900px;
   max-width:92%;
 
@@ -411,6 +427,13 @@ body {
   border:none;
   background:#8b6a4e;
   color:#fff;
+  cursor:pointer;
+}
+.popup-close{
+  position:absolute;
+  top:20px;
+  right:20px;
+  font-size:20px;
   cursor:pointer;
 }
 /* MOBILE */
@@ -913,13 +936,11 @@ body {
 }
 
 .footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 50px;
-  flex-wrap: wrap;
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr;
+  gap:60px;
+  max-width:1200px;
+  margin:auto;
 }
 
 .footer-brand {
@@ -983,6 +1004,7 @@ body {
   font-size: 13px;
   color: #a58e7c;
 }
+
 
 
 
