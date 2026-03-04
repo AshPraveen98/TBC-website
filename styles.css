@@ -871,8 +871,8 @@ body::before{
 
 .site-footer {
   background: #f4ede6;
-  padding: 90px 8% 50px 8%;
-  margin-top: 120px;
+  padding: 60px 8% 35px 8%;
+  margin-top: 90px;
 }
 
 .footer-container {
@@ -947,5 +947,6 @@ body::before{
   font-size: 13px;
   color: #a58e7c;
 }
+
 
 
