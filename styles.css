@@ -936,13 +936,14 @@ body {
 }
 
 .footer-container {
-  display:grid;
-  grid-template-columns:1.5fr 1fr 1fr;
-  gap:60px;
-  max-width:1200px;
-  margin:auto;
-}
+  max-width: 1200px;
+  margin: 0 auto;
 
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+
+  gap: 60px;
+}
 .footer-brand {
   flex: 1;
   min-width: 260px;
@@ -954,7 +955,8 @@ body {
   font-weight: 500;
 }
 
-.footer-brand p {
+.footer-brand p{
+  margin-top:8px;
   font-size: 14px;
   color: #7b5d49;
   line-height: 1.6;
@@ -1003,6 +1005,14 @@ body {
   text-align: center;
   font-size: 13px;
   color: #a58e7c;
+}
+@media (max-width: 768px) {
+
+.footer-container{
+  grid-template-columns:1fr;
+  gap:35px;
+}
+
 }
 
 
