@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact | The Baker's Company</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+<!-- NAVBAR -->
+
+<header class="tbc-navbar" id="tbcNavbar">
+
+<div class="nav-container">
+
+<div class="logo">
+TBC The Baker's Company
+</div>
+
+<nav class="nav-links">
+
+<a href="index.html">Home</a>
+<a href="projects.html">Projects</a>
+<a href="services.html">Services</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+
+<a href="javascript:void(0)" onclick="openPopup()" class="tbc-nav-cta">
+Book Consultation
+</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+
+<!-- HERO -->
+
+<section class="inner-hero">
+
+<h1>Contact Us</h1>
+
+<p>
+Let’s talk about your space and how we can bring it to life.
+</p>
+
+</section>
+
+
+
+<!-- CONTACT SECTION -->
+
+<section class="contact-section">
+
+<div class="contact-container">
+
+<div class="contact-details">
+
+<h2>Get in touch</h2>
+
+<p>
+Planning a new interior project or renovating your space? We'd love to hear about it.
+</p>
+
+<div class="contact-item">
+<strong>Phone</strong>
+<p>+91 9597571740</p>
+</div>
+
+<div class="contact-item">
+<strong>Email</strong>
+<p>thebakerscompany@gmail.com</p>
+</div>
+
+<div class="contact-item">
+<strong>Base Location</strong>
+<p>Chennai, Tamil Nadu</p>
+</div>
+
+</div>
+
+
+
+<div class="contact-form">
+
+<form id="contactPageForm">
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="tel" placeholder="Phone Number" required>
+
+<input type="email" placeholder="Email Address">
+
+<textarea rows="4" placeholder="Tell us about your project"></textarea>
+
+<button type="submit">
+Send Message
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- CHENNAI MAP -->
+
+<section class="map-section">
+
+<div class="map-inner">
+
+<h2>Based in Chennai</h2>
+
+<p>
+Our design consultations are coordinated from Chennai, with projects executed across multiple cities.
+</p>
+
+<iframe
+src="https://maps.google.com/maps?q=chennai&t=&z=11&ie=UTF8&iwloc=&output=embed"
+loading="lazy">
+</iframe>
+
+</div>
+
+</section>
+
+
+
+<!-- SERVICE AREAS -->
+
+<section class="service-area">
+
+<div class="service-area-inner">
+
+<h2>Projects Across Cities</h2>
+
+<p class="service-area-desc">
+While our base is in Chennai, we work with clients across several cities through
+scheduled consultations and site visits.
+</p>
+
+<div class="cities">
+
+<span>Chennai</span>
+<span>Nasik</span>
+<span>Mumbai</span>
+<span>Pune</span>
+<span>Bangalore</span>
+
+</div>
+
+<p class="consult-note">
+Consultations are conducted virtually or on-site by appointment.
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- CTA -->
+
+<section class="cta-section">
+
+<h2>
+Ready to start designing your space?
+</h2>
+
+<a href="javascript:void(0)" onclick="openPopup()" class="cta-btn">
+Book a Free Consultation
+</a>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer class="site-footer">
+
+<div class="footer-container">
+
+<div class="footer-brand">
+<h3>TBC The Baker's Company</h3>
+<p>Designing spaces that feel like home.</p>
+</div>
+
+<div class="footer-links">
+
+<h4>Explore</h4>
+
+<a href="index.html">Home</a>
+<a href="projects.html">Projects</a>
+<a href="services.html">Services</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+
+<div class="footer-contact">
+
+<h4>Connect</h4>
+
+<p>Based in Chennai</p>
+<p>+91 9597571740</p>
+<p>thebakerscompany@gmail.com</p>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+© 2026 The Baker's Company. All rights reserved.
+</div>
+
+</footer>
+
+<!-- POPUP -->
+
+<div class="popup-overlay" id="contactPopup">
+
+<div class="popup-box">
+
+<div class="popup-left">
+
+<div class="popup-brand">TBC</div>
+
+<h3>Design Begins With a Conversation</h3>
+
+<p>
+Tell us about your space and aspirations.
+Our team will reach out within 24 hours.
+</p>
+
+<div class="popup-materials">
+TIMBER • BRICK • CONCRETE
+</div>
+
+</div>
+
+
+<div class="popup-right">
+
+<div class="popup-close" onclick="closePopup()">✕</div>
+
+<form class="popup-form" id="leadForm">
+
+<input type="text" placeholder="Your Name" required>
+<input type="tel" placeholder="Phone Number" required>
+<input type="email" placeholder="Email Address">
+<textarea rows="3" placeholder="Project details"></textarea>
+
+<button type="submit">
+Request Consultation
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function openPopup(){
+document.getElementById('contactPopup').classList.add('active');
+}
+
+function closePopup(){
+document.getElementById('contactPopup').classList.remove('active');
+}
+
+</script>
+
+</body>
+</html>
