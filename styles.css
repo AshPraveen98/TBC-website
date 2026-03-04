@@ -325,21 +325,30 @@ body {
   transform: translateY(-2px) scale(1.05);
 }
 /* ===== TBC CONSULT POPUP ===== */
-.popup-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(22, 15, 8, 0.55);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  display: none;
-  justify-content: center;
+.popup-overlay{
+  position: fixed;   /* critical change */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(6px);
+
+  display: flex;
   align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+
   z-index: 9999;
-  padding: 30px;
+  transition: opacity .3s ease;
 }
 
-.popup-overlay.active {
-  display: flex;
+.popup-overlay.active{
+  opacity: 1;
+  visibility: visible;
 }
 
 .popup-box {
@@ -1026,6 +1035,7 @@ body {
   font-size: 13px;
   color: #a58e7c;
 }
+
 
 
 
