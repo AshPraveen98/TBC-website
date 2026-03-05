@@ -31,3 +31,23 @@
   color:var(--tbc-text);
   font-weight:500;
 }
+
+.site-footer{
+  background:#f4ede6;
+  padding:60px 8% 35px;
+  margin-top:90px;
+}
+
+.footer-container{
+  max-width:1200px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1.4fr 1fr 1fr;
+  gap:60px;
+}
+
+.footer-bottom{
+  margin-top:40px;
+  text-align:center;
+  font-size:13px;
+}
