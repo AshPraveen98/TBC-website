@@ -1,1 +1,35 @@
+:root{
+  --tbc-brown:#8b6a4e;
+  --tbc-brown-dark:#6f533d;
+  --tbc-cream:#f6efe7;
+  --tbc-cream-soft:#fbf7f2;
+  --tbc-text:#2b2b2b;
+  --tbc-muted:#7a6f66;
+}
 
+*{margin:0;padding:0;box-sizing:border-box}
+
+*{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Inter,sans-serif;
+  background:var(--tbc-cream);
+  color:var(--tbc-text);
+  padding-top:90px;
+}
+
+/* Subtle warmth overlay */
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background-image:
+    radial-gradient(rgba(0,0,0,0.015) 1px, transparent 1px);
+  background-size:3px 3px;
+  opacity:.4;
+  z-index:0;
+}
