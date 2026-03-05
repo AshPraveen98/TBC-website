@@ -1,0 +1,16 @@
+@keyframes heroDrift{
+  from{transform:translateY(-10px)}
+  to{transform:translateY(10px)}
+}
+
+/* page transition */
+
+body{
+  opacity:0;
+  animation:pageFadeIn .6s ease forwards;
+}
+
+@keyframes pageFadeIn{
+  from{opacity:0}
+  to{opacity:1}
+}
