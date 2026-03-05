@@ -1163,6 +1163,20 @@ box-shadow:0 10px 20px rgba(0,0,0,0.12);
 }
 
 }
+/* =========================
+   SCROLL REVEAL ANIMATION
+========================= */
+
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:opacity .7s ease, transform .7s ease;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
 
 
 
