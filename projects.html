@@ -52,10 +52,10 @@ Book Consultation
 </section>
 
 <!-- ===== POLAROID PROJECT GRID ===== -->
-<section class="polaroid-section reveal">
-  <div class="polaroid-grid reveal">
+<section class="polaroid-section">
+  <div class="polaroid-grid">
 
-    <div class="polaroid-card reveal reveal-delay-1">
+    <div class="polaroid-card reveal-group">
       <div class="polaroid-img"></div>
       <div class="polaroid-caption">
         <h4>Urban Luxe Residence</h4>
@@ -63,7 +63,7 @@ Book Consultation
       </div>
     </div>
 
-    <div class="polaroid-card reveal reveal-delay-2">
+    <div class="polaroid-card reveal-group">
       <div class="polaroid-img"></div>
       <div class="polaroid-caption">
         <h4>The Minimal Haven</h4>
@@ -71,7 +71,7 @@ Book Consultation
       </div>
     </div>
 
-    <div class="polaroid-card reveal reveal-delay-3">
+    <div class="polaroid-card reveal-group">
       <div class="polaroid-img"></div>
       <div class="polaroid-caption">
         <h4>Studio Workspace</h4>
@@ -79,7 +79,7 @@ Book Consultation
       </div>
     </div>
 
-    <div class="polaroid-card reveal reveal-delay-4">
+    <div class="polaroid-card reveal-group">
       <div class="polaroid-img"></div>
       <div class="polaroid-caption">
         <h4>Warm Modern Bedroom</h4>
@@ -182,30 +182,22 @@ document.getElementById('contactPopup').classList.remove('active');
 </script>
 <script>
 
-const reveals = document.querySelectorAll(".reveal");
-
-function revealOnScroll(){
-
-  reveals.forEach(el => {
-
-    const windowHeight = window.innerHeight;
-    const elementTop = el.getBoundingClientRect().top;
-
-    if(elementTop < windowHeight - 80){
-      el.classList.add("active");
-    }
-
-  });
-
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("active");
 }
+});
+});
 
-window.addEventListener("scroll", revealOnScroll);
-revealOnScroll();
+document.querySelectorAll(".reveal, .reveal-group")
+.forEach(el=>observer.observe(el));
 
 </script>
 </body>
 
 </html>
+
 
 
 
