@@ -138,19 +138,18 @@ body {
 
 /* ===== NAVBAR SYSTEM ===== */
 
-.tbc-navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
+.tbc-navbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:1000;
 
-  background: rgba(248, 244, 236, 0.65);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background:rgba(248,244,236,0.65);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
 
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-
-  transition: all 0.3s ease;
+  border-bottom:1px solid rgba(0,0,0,0.05);
+  transition:all .35s ease;
 }
 
 .nav-container {
@@ -1197,6 +1196,7 @@ box-shadow:0 10px 20px rgba(0,0,0,0.12);
 .inner-hero{
   padding-top:90px;
 }
+
 
 
 
