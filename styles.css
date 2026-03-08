@@ -1175,6 +1175,12 @@ box-shadow:0 10px 20px rgba(0,0,0,0.12);
   opacity:1;
   transform:translateY(0);
 }
+/* HERO OFFSET FOR FIXED NAVBAR */
+
+.hero,
+.inner-hero{
+  padding-top:90px;
+}
 
 
 
