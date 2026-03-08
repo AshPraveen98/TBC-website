@@ -15,8 +15,6 @@ body {
   font-family: Inter, sans-serif;
   background: var(--tbc-cream);
   color: var(--tbc-text);
-
-  padding-top: 90px;
 }
 
 /* HERO */
@@ -1177,6 +1175,7 @@ box-shadow:0 10px 20px rgba(0,0,0,0.12);
   opacity:1;
   transform:translateY(0);
 }
+
 
 
 
