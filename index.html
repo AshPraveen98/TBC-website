@@ -222,20 +222,20 @@ document.getElementById("leadForm").addEventListener("submit",function(e){
 </script>
 <script>
 
-window.addEventListener("scroll", function() {
+window.addEventListener("scroll", function(){
 
 const navbar = document.getElementById("tbcNavbar");
 
 if(window.scrollY > 80){
 
-navbar.style.background="rgba(248,244,236,0.9)";
-navbar.style.backdropFilter="blur(14px)";
-navbar.style.boxShadow="0 8px 25px rgba(0,0,0,0.05)";
+navbar.style.background = "rgba(248,244,236,0.9)";
+navbar.style.backdropFilter = "blur(16px)";
+navbar.style.boxShadow = "0 10px 30px rgba(0,0,0,0.08)";
 
 }else{
 
-navbar.style.background="transparent";
-navbar.style.boxShadow="none";
+navbar.style.background = "rgba(248,244,236,0.55)";
+navbar.style.boxShadow = "none";
 
 }
 
@@ -311,6 +311,7 @@ hero.style.transform=`translateY(${offset}px)`;
 </body>
 
 </html>
+
 
 
 
