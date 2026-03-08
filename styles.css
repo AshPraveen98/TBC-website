@@ -16,7 +16,11 @@ body {
   background: var(--tbc-cream);
   color: var(--tbc-text);
 }
-
+.section-container{
+max-width:1200px;
+margin:auto;
+padding:0 40px;
+}
 /* HERO */
 .hero{
   position: relative;
@@ -1212,6 +1216,7 @@ box-shadow:0 10px 20px rgba(0,0,0,0.12);
 .reveal-group.active > *:nth-child(3){transition:.6s ease .25s}
 .reveal-group.active > *:nth-child(4){transition:.6s ease .35s}
 .reveal-group.active > *:nth-child(5){transition:.6s ease .45s}
+
 
 
 
