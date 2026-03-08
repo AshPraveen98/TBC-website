@@ -67,27 +67,27 @@ gtag('config', 'G-XXXXXXXXXX');
       <p>A structured journey from concept to completion.</p>
     </div>
 
-    <div class="process-grid reveal">
+    <div class="process-grid reveal-group">
 
-      <div class="process-card reveal reveal-delay-1">
+      <div class="process-card">
         <span>01</span>
         <h4>Discover</h4>
         <p>We understand your lifestyle, aspirations, and functional needs.</p>
       </div>
 
-      <div class="process-card reveal reveal-delay-2">
+      <div class="process-card">
         <span>02</span>
         <h4>Design</h4>
         <p>Layouts, materials, and aesthetics are carefully curated for you.</p>
       </div>
 
-      <div class="process-card reveal reveal-delay-3">
+      <div class="process-card">
         <span>03</span>
         <h4>Execute</h4>
         <p>We manage timelines, vendors, and site quality with discipline.</p>
       </div>
 
-      <div class="process-card reveal reveal-delay-4">
+      <div class="process-card">
         <span>04</span>
         <h4>Deliver</h4>
         <p>Your completed home, refined and ready to live beautifully.</p>
@@ -276,17 +276,16 @@ navbar.style.boxShadow = "none";
 </footer>
 <script>
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add("active");
-    }
-  });
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("active");
+}
+});
 });
 
-document.querySelectorAll(".reveal").forEach(el=>{
-  observer.observe(el);
-});
+document.querySelectorAll(".reveal, .reveal-group")
+.forEach(el=>observer.observe(el));
 
 </script>
 <script>
@@ -307,6 +306,7 @@ hero.style.transform=`translateY(${offset}px)`;
 </body>
 
 </html>
+
 
 
 
