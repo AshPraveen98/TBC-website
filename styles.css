@@ -802,26 +802,26 @@ font-weight:500;
   );
 }
 
-.why-inner{
+.why-tbc-inner{
   max-width:1100px;
   margin:auto;
   text-align:center;
 }
 
-.why-inner h2{
+.why-tbc-inner h2{
   font-family:"Playfair Display", serif;
   color:#3a2f27;
   font-size:34px;
   margin-bottom:50px;
 }
 
-.why-grid{
+.why-tbc-grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:24px;
 }
 
-.why-card{
+.why-tbc-card{
 background:#f3f1ed;
 padding:28px;
 border-radius:18px;
@@ -829,19 +829,19 @@ box-shadow:0 8px 22px rgba(0,0,0,0.05);
 transition:transform .3s ease, box-shadow .3s ease;
 }
 
-.why-card:hover{
+.why-tbc-card:hover{
 transform:translateY(-4px);
 box-shadow:0 14px 30px rgba(0,0,0,0.08);
 }
 
-.why-card h3{
+.why-tbc-card h3{
 font-family:"Playfair Display", serif;
 font-size:18px;
 margin-bottom:8px;
 color:#3a2f27;
 }
 
-.why-card p{
+.why-tbc-card p{
 color:var(--tbc-muted);
 font-size:14px;
 line-height:1.6;
@@ -1216,6 +1216,7 @@ box-shadow:0 10px 20px rgba(0,0,0,0.12);
 .reveal-group.active > *:nth-child(3){transition:.6s ease .25s}
 .reveal-group.active > *:nth-child(4){transition:.6s ease .35s}
 .reveal-group.active > *:nth-child(5){transition:.6s ease .45s}
+
 
 
 
