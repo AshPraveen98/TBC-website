@@ -763,30 +763,33 @@ box-shadow:0 40px 100px rgba(0,0,0,0.25);
   color:#3a2f27;
   margin-bottom:40px;
 }
-
+.testimonials-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:28px;
+margin-top:20px;
+}
 .testimonial-card{
 background:#f3f1ed;
 padding:30px;
 border-radius:18px;
 box-shadow:0 10px 25px rgba(0,0,0,0.04);
+transition:transform .3s ease, box-shadow .3s ease;
 }
-
-.testimonial-card{
-background:#f3f1ed;
-padding:30px;
-border-radius:18px;
-box-shadow:0 10px 25px rgba(0,0,0,0.04);
+.testimonial-card:hover{
+transform:translateY(-4px);
+box-shadow:0 16px 30px rgba(0,0,0,0.08);
 }
-
 .testimonial-card p{
-  color:var(--tbc-muted);
-  margin-bottom:10px;
-  line-height:1.6;
+color:var(--tbc-muted);
+margin-bottom:12px;
+line-height:1.7;
+font-style:italic;
 }
-
 .testimonial-card span{
-  font-size:13px;
-  color:#3a2f27;
+font-size:14px;
+color:#6e5f52;
+font-weight:500;
 }
 /* ===== WHY TBC ===== */
 
@@ -1216,6 +1219,7 @@ box-shadow:0 10px 20px rgba(0,0,0,0.12);
 .reveal-group.active > *:nth-child(3){transition:.6s ease .25s}
 .reveal-group.active > *:nth-child(4){transition:.6s ease .35s}
 .reveal-group.active > *:nth-child(5){transition:.6s ease .45s}
+
 
 
 
