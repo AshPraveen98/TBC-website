@@ -89,6 +89,22 @@ body {
   padding: 0 24px;
   margin: 0 auto;
 }
+.hero{
+  position:relative;
+  min-height:92vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+.hero-bg{
+  position:absolute;
+  inset:-40px;
+  z-index:-1;
+  transform:scale(1.1);
+  transition:transform .2s ease-out;
+}
 
 /* Add breathing below subtitle */
 .hero p{
@@ -1181,6 +1197,7 @@ box-shadow:0 10px 20px rgba(0,0,0,0.12);
 .inner-hero{
   padding-top:90px;
 }
+
 
 
 
