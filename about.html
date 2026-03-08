@@ -238,6 +238,20 @@ function closePopup(){
 document.getElementById('contactPopup').classList.remove('active');
 }
 </script>
+<script>
+
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("active");
+}
+});
+});
+
+document.querySelectorAll(".reveal, .reveal-group")
+.forEach(el=>observer.observe(el));
+
+</script>
 <footer class="site-footer">
 
   <div class="footer-container">
@@ -272,6 +286,7 @@ document.getElementById('contactPopup').classList.remove('active');
 </footer>
 </body>
 </html>
+
 
 
 
