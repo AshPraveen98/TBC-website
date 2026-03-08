@@ -276,21 +276,17 @@ navbar.style.boxShadow = "none";
 </footer>
 <script>
 
-const reveals = document.querySelectorAll(".reveal");
-
-function revealOnScroll(){
-  reveals.forEach(el => {
-    const windowHeight = window.innerHeight;
-    const elementTop = el.getBoundingClientRect().top;
-
-    if(elementTop < windowHeight - 80){
-      el.classList.add("active");
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("active");
     }
   });
-}
+});
 
-window.addEventListener("scroll", revealOnScroll);
-revealOnScroll();
+document.querySelectorAll(".reveal").forEach(el=>{
+  observer.observe(el);
+});
 
 </script>
 <script>
@@ -311,6 +307,7 @@ hero.style.transform=`translateY(${offset}px)`;
 </body>
 
 </html>
+
 
 
 
