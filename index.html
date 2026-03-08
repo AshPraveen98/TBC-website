@@ -284,9 +284,25 @@ window.addEventListener("scroll", revealOnScroll);
 revealOnScroll();
 
 </script>
+<script>
+
+const hero=document.querySelector(".hero");
+
+window.addEventListener("scroll",()=>{
+
+if(!hero)return;
+
+const offset=window.scrollY * 0.2;
+
+hero.style.transform=`translateY(${offset}px)`;
+
+});
+
+</script>
 </body>
 
 </html>
+
 
 
 
