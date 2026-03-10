@@ -957,13 +957,13 @@ gap:60px;
 max-width:1100px;
 margin:auto;
 }
-.contact-container a {
-  color: #7b5d49;
+.contact-details a {
+  color: #5f5348;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.contact-container  a:hover {
+.contact-details a:hover {
   color: var(--tbc-brown);
 }
 
@@ -1722,4 +1722,5 @@ box-shadow:0 10px 20px rgba(0,0,0,0.12);
     padding: 32px 20px;
   }
 }
+
 
