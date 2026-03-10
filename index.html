@@ -31,7 +31,7 @@ gtag('config', 'G-XXXXXXXXXX');
       TBC The Baker's Company
     </div>
 
-    <nav class="nav-links">
+    <nav class="nav-links" id="navLinks">
       <a href="index.html">Home</a>
       <a href="projects.html">Projects</a>
       <a href="services.html">Services</a>
@@ -41,6 +41,10 @@ gtag('config', 'G-XXXXXXXXXX');
          Book Consultation
       </a>
     </nav>
+
+    <button class="nav-hamburger" id="navHamburger" onclick="toggleNav()" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
 
   </div>
 </header>
@@ -178,6 +182,10 @@ gtag('config', 'G-XXXXXXXXXX');
 <script>
 function openPopup(){document.getElementById('contactPopup').classList.add('active');}
 function closePopup(){document.getElementById('contactPopup').classList.remove('active');}
+function toggleNav(){
+  document.getElementById('navLinks').classList.toggle('open');
+  document.getElementById('navHamburger').classList.toggle('open');
+}
 
 window.addEventListener('scroll',()=>{
   if(window.scrollY>300){floatingCTA.classList.add('show')}
@@ -251,7 +259,7 @@ navbar.style.boxShadow = "none";
       <h4>Connect</h4>
       <p>Chennai-Bangalore-Puducherry</p>
       <p>+91 9597571740</p>
-      <p>contact@tbcarch.in</p>
+      <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2c4f4342584d4f586c584e4f4d5e4f44024542">[email&#160;protected]</a></p>
     </div>
 
   </div>
@@ -261,7 +269,7 @@ navbar.style.boxShadow = "none";
   </div>
 
 </footer>
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 
 const observer = new IntersectionObserver(entries=>{
 entries.forEach(entry=>{
@@ -277,40 +285,4 @@ document.querySelectorAll(".reveal, .reveal-group")
 </script>
 <script>
 
-const hero=document.querySelector(".hero");
-
-window.addEventListener("scroll",()=>{
-
-if(!hero)return;
-
-const offset=window.scrollY * 0.2;
-
-hero.style.transform=`translateY(${offset}px)`;
-
-});
-
-</script>
-</body>
-
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const
