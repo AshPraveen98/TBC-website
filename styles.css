@@ -1340,6 +1340,9 @@ box-shadow:0 10px 20px rgba(0,0,0,0.12);
     grid-template-columns: repeat(2, 1fr);
     padding: 0 32px;
   }
+  .contact-details p {
+   color: #5f5348;
+  }
 
   /* --- CONTACT PAGE --- */
   .contact-container {
@@ -1722,5 +1725,6 @@ box-shadow:0 10px 20px rgba(0,0,0,0.12);
     padding: 32px 20px;
   }
 }
+
 
 
