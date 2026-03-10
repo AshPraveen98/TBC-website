@@ -1060,7 +1060,7 @@ cursor:pointer;
 
 .tbc-india-map {
   width: 100%;
-  max-width: 480px;
+  max-width: 680px;
   height: auto;
   display: block;
   overflow: visible;
@@ -1860,7 +1860,7 @@ box-shadow:0 10px 20px rgba(0,0,0,0.12);
 @media (max-width: 768px) {
   .map-heading h2    { font-size: 30px; }
   .tbc-map-frame     { padding: 24px 20px 20px; border-radius: 14px; }
-  .tbc-india-map     { max-width: 300px; }
+  .tbc-india-map     { max-width: 420px; }
   .pin-label         { font-size: 10px; }
   .hq-label          { font-size: 11px; }
   .pin-sublabel      { font-size: 8px; }
