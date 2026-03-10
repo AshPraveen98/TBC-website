@@ -962,6 +962,15 @@ margin:auto;
 margin-bottom:20px;
 }
 
+.contact-details a{
+  color: #8B6A4E;
+  text-decoration: none;
+}
+
+.contact-email a:hover {
+  color: #6E523C;
+}
+
 .contact-item{
 margin-top:18px;
 }
