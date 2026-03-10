@@ -990,7 +990,7 @@ cursor:pointer;
 /* MAP SECTION */
 
 .map-section {
-  padding: 100px 8%;
+  padding: 100px 8% 40px;
   background: #f8f4ec;
   text-align: center;
 }
