@@ -117,6 +117,10 @@
         <input type="tel" placeholder="Phone Number" required>
         <input type="email" placeholder="Email Address">
         <textarea rows="3" placeholder="Project details"></textarea>
+        <label style="font-size:13px; color:#7b5d49; display:flex; gap:8px; align-items:flex-start;">
+          <input type="checkbox" required style="margin-top:3px;">
+          I agree to the <a href="javascript:void(0)" onclick="closePopup();openPrivacy();" style="color:var(--tbc-brown);">Privacy Policy</a>
+        </label>
         <button type="submit">Request Consultation</button>
       </form>
     </div>
@@ -166,5 +170,6 @@ document.querySelectorAll(".reveal, .reveal-group").forEach(el => observer.obser
 
 </body>
 </html>
+
 
 
