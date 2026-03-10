@@ -39,10 +39,14 @@
     <div class="contact-details">
       <h2>Get in touch</h2>
       <p>Planning a new interior project or renovating your space? We'd love to hear about it.</p>
-      <div class="contact-item"></div>
+      <div class="contact-item">
+        <strong>Phone</strong>
+        <p>+91 9597571740</p>
+      </div>
       <div class="contact-item">
         <strong>Email</strong>
-       <p><a href="mailto:contact@tbcarch.in?subject=Interior Design Enquiry">contact@tbcarch.in</a></p>
+        <p><a href="/cdn-cgi/l/email-protection#e5868a8b91848691a59187868497868dcb8c8bda9690878f808691d8ac8b9180978c8a97c5a180968c828bc5a08b94908c979c"><span class="__cf_email__" data-cfemail="8deee2e3f9eceef9cdf9efeeecffeee5a3e4e3">[email&#160;protected]</span></a></p>
+      </div>
       <div class="contact-item">
         <strong>Base Location</strong>
         <p>Chennai, Tamil Nadu</p>
@@ -63,9 +67,12 @@
 <!-- INDIA MAP -->
 <section class="map-section">
   <div class="map-inner">
-    <h2>Our Presence</h2>
-    
-    <p>Our design consultations are coordinated from Chennai, with project line up across South India</p>
+    <div class="map-heading">
+      <h2>Where We Work</h2>
+      <div class="map-heading-rule"></div>
+      <p>Our design consultations are coordinated from Chennai, with projects executed across multiple cities.</p>
+    </div>
+    <div class="tbc-map-frame">
     <div class="tbc-map-wrapper">
       <svg class="tbc-india-map" viewBox="0 0 620 760" xmlns="http://www.w3.org/2000/svg">
 <path
@@ -262,6 +269,7 @@
       </svg>
       <div class="map-tooltip" id="mapTooltip"></div>
     </div>
+    </div><!-- /.tbc-map-frame -->
   </div>
 </section>
 
@@ -366,26 +374,6 @@
   </div>
 </div>
 
-<!-- MAP CSS -->
-<style>
-.tbc-map-wrapper { position:relative; margin-top:36px; display:flex; justify-content:center; }
-.tbc-india-map { width:100%; max-width:540px; height:auto; display:block; overflow:visible; filter:drop-shadow(0 12px 32px rgba(0,0,0,0.09)); }
-.india-state { fill:#e8ddd0; stroke:#c4a882; stroke-width:0.6; transition:fill 0.2s ease; }
-.india-state:hover { fill:#ddd0be; }
-.city-pin { cursor:pointer; }
-.pin-pulse { animation:mapPulse 2.5s ease-in-out infinite; }
-.pin-pulse-2 { animation-delay:0.5s; }
-.pin-pulse-3 { animation-delay:1.0s; }
-.pin-pulse-4 { animation-delay:1.5s; }
-.pin-pulse-5 { animation-delay:2.0s; }
-@keyframes mapPulse { 0%,100%{ opacity:.35; } 50%{ opacity:.08; } }
-.pin-label { font-family:'Inter',sans-serif; font-size:13px; font-weight:600; fill:#3a2f27; pointer-events:none; }
-.hq-label { font-size:14px; font-weight:700; fill:#5a3825; }
-.pin-sublabel { font-family:'Inter',sans-serif; font-size:10px; font-weight:500; fill:#8b6a4e; pointer-events:none; }
-.map-tooltip { position:absolute; background:#3a2f27; color:#fff; font-family:'Inter',sans-serif; font-size:13px; padding:7px 13px; border-radius:8px; pointer-events:none; opacity:0; transition:opacity 0.2s ease; white-space:nowrap; z-index:10; transform:translateX(-50%); }
-.map-tooltip.show { opacity:1; }
-@media(max-width:768px){ .tbc-india-map{ max-width:340px; } .pin-label{ font-size:10px; } .hq-label{ font-size:11px; } .pin-sublabel{ font-size:8px; } }
-</style>
 
 <!-- SCRIPTS -->
 <script>
@@ -466,5 +454,3 @@ document.querySelectorAll(".reveal,.reveal-group").forEach(function(el){ obs.obs
 </script>
 </body>
 </html>
-
-
