@@ -1035,6 +1035,7 @@ cursor:pointer;
   position: relative;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 
 .tbc-india-map {
@@ -1042,7 +1043,6 @@ cursor:pointer;
   max-width: 90%;
   height: auto;
   display: block;
-  overflow: visible;
   margin: 0 auto;
   filter: drop-shadow(0 8px 24px rgba(0,0,0,0.10));
 }
