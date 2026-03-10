@@ -1010,7 +1010,7 @@ cursor:pointer;
   font-size: 42px;
   font-weight: 700;
   color: #3e2a1d;
-  margin: 0 0 16px;
+  margin: 0 0 14px;
   letter-spacing: -0.5px;
 }
 
@@ -1019,7 +1019,7 @@ cursor:pointer;
   height: 3px;
   background: linear-gradient(90deg, #8b6a4e, #c4a882);
   border-radius: 2px;
-  margin: 0 auto 20px;
+  margin: 0 auto 18px;
 }
 
 .map-heading p {
@@ -1033,29 +1033,30 @@ cursor:pointer;
 /* Map wrapper & SVG */
 .tbc-map-wrapper {
   position: relative;
+  margin-top: 36px;
   display: flex;
   justify-content: center;
-  margin-top: 8px;
 }
 
 .tbc-india-map {
-  width: 420px;
-  max-width: 84%;
+  width: 100%;
+  max-width: 540px;
   height: auto;
   display: block;
-  filter: drop-shadow(0 6px 20px rgba(0,0,0,0.09));
+  overflow: visible;
+  filter: drop-shadow(0 12px 32px rgba(0,0,0,0.09));
 }
 
-/* States */
+/* States — richer colour for better visibility on cream background */
 .india-state {
-  fill: #ede4d8;
-  stroke: #c9ae8f;
-  stroke-width: 0.5;
+  fill: #c9b49a;
+  stroke: #8b6a4e;
+  stroke-width: 0.6;
   transition: fill 0.2s ease;
 }
 
 .india-state:hover {
-  fill: #d9ccc0;
+  fill: #b8a08a;
 }
 
 /* City pins */
@@ -1078,23 +1079,23 @@ cursor:pointer;
 
 .pin-label {
   font-family: 'Inter', sans-serif;
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 600;
-  fill: #3a2f27;
+  fill: #2b1f17;
   pointer-events: none;
 }
 
 .hq-label {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
-  fill: #5a3825;
+  fill: #3e1f0e;
 }
 
 .pin-sublabel {
   font-family: 'Inter', sans-serif;
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 500;
-  fill: #8b6a4e;
+  fill: #7a5a40;
   pointer-events: none;
 }
 
@@ -1119,13 +1120,21 @@ cursor:pointer;
   opacity: 1;
 }
 
-/* Legacy iframe rule kept for safety */
+/* Legacy iframe rule */
 .map-section iframe {
   width: 100%;
   height: 380px;
   border: 0;
   border-radius: 12px;
   margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .map-heading h2  { font-size: 30px; }
+  .tbc-india-map   { max-width: 340px; }
+  .pin-label       { font-size: 9px; }
+  .hq-label        { font-size: 10px; }
+  .pin-sublabel    { font-size: 8px; }
 }
 
 
@@ -1833,12 +1842,4 @@ box-shadow:0 10px 20px rgba(0,0,0,0.12);
     padding: 32px 20px;
     max-height: 88vh;
   }
-}
-
-@media (max-width: 768px) {
-  .map-heading h2    { font-size: 30px; }
-  .tbc-india-map     { max-width: 100%; }
-  .pin-label         { font-size: 10px; }
-  .hq-label          { font-size: 11px; }
-  .pin-sublabel      { font-size: 8px; }
 }
