@@ -1033,22 +1033,11 @@ cursor:pointer;
 /* Map frame */
 .tbc-map-frame {
   background: #fff;
-  border: 1.5px solid #e0d3c3;
-  border-radius: 20px;
-  padding: 36px 40px 32px;
-  box-shadow: 0 8px 40px rgba(139,106,78,0.10), 0 2px 8px rgba(0,0,0,0.04);
+  border: 1.5px solid #d4c4b0;
+  border-radius: 16px;
+  padding: 32px;
   display: inline-block;
   position: relative;
-}
-
-.tbc-map-frame::before {
-  content: '';
-  position: absolute;
-  inset: -1.5px;
-  border-radius: 20px;
-  background: linear-gradient(135deg, rgba(196,168,130,0.35) 0%, transparent 50%, rgba(196,168,130,0.15) 100%);
-  pointer-events: none;
-  z-index: 0;
 }
 
 /* Map wrapper & SVG */
@@ -1060,7 +1049,7 @@ cursor:pointer;
 
 .tbc-india-map {
   width: 100%;
-  max-width: 680px;
+  max-width: 560px;
   height: auto;
   display: block;
   overflow: visible;
@@ -1859,8 +1848,8 @@ box-shadow:0 10px 20px rgba(0,0,0,0.12);
 
 @media (max-width: 768px) {
   .map-heading h2    { font-size: 30px; }
-  .tbc-map-frame     { padding: 24px 20px 20px; border-radius: 14px; }
-  .tbc-india-map     { max-width: 420px; }
+  .tbc-map-frame     { padding: 20px; border-radius: 12px; }
+  .tbc-india-map     { max-width: 100%; }
   .pin-label         { font-size: 10px; }
   .hq-label          { font-size: 11px; }
   .pin-sublabel      { font-size: 8px; }
