@@ -252,15 +252,16 @@ var obs = new IntersectionObserver(function(entries){
   entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add("active"); });
 });
 document.querySelectorAll(".reveal,.reveal-group").forEach(function(el){ obs.observe(el); });
-
-// D3 India Map
+// D3 India Map - Reliable No-Fetch Version
 (function(){
   var W=540, H=580;
   var svg = d3.select("#indiaMap").attr("viewBox","0 0 "+W+" "+H);
 
-  var proj = d3.geoMercator().center([82.5,22]).scale(920).translate([W/2, H/2]);
+  // Projections and path generator
+  var proj = d3.geoMercator().center([82.1, 22]).scale(940).translate([W/2, H/2]);
   var pathGen = d3.geoPath().projection(proj);
 
+  // Data for project locations
   var cities = [
     {name:"Chennai",    lon:80.27, lat:13.08, hq:true,  side:"right"},
     {name:"Puducherry", lon:79.83, lat:11.93, hq:false, side:"left"},
@@ -269,91 +270,81 @@ document.querySelectorAll(".reveal,.reveal-group").forEach(function(el){ obs.obs
     {name:"Mumbai",     lon:72.87, lat:19.07, hq:false, side:"left"}
   ];
 
+  // Simplified India GeoJSON boundary (No external fetch required)
+  var indiaOutline = {
+    "type": "FeatureCollection",
+    "features": [{
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [68.1,23.6],[74.1,24.5],[77.3,31.1],[78.1,35.1],[80.2,35.3],[81.1,30.1],
+          [88.1,28.1],[91.5,27.8],[96.1,28.3],[97.3,27.1],[94.2,23.5],[92.1,21.1],
+          [88.2,21.7],[85.1,20.2],[80.1,15.8],[79.5,12.1],[77.2,8.1],[76.5,10.2],
+          [74.1,15.1],[72.8,19.1],[68.1,23.6]
+        ]]
+      }
+    }]
+  };
+
   var tooltip = document.getElementById("mapTooltip");
   var wrapper = document.querySelector(".tbc-map-wrapper");
 
-  fetch("https://cdn.jsdelivr.net/npm/india-topojson@1.0.0/india.json")
-    .then(function(r){ return r.json(); })
-    .then(function(india){
-      var key = Object.keys(india.objects)[0];
-      var states = topojson.feature(india, india.objects[key]);
+  // 1. Draw Map Background
+  svg.append("g").selectAll("path")
+    .data(indiaOutline.features)
+    .join("path")
+    .attr("class","india-state")
+    .attr("d", pathGen);
 
-      svg.append("g").selectAll("path")
-        .data(states.features)
-        .join("path")
-        .attr("class","india-state")
-        .attr("d", pathGen);
+  // 2. Draw Connector Lines
+  var pairs = [[0,1],[0,2],[2,3],[3,4]];
+  pairs.forEach(function(p){
+    var a=cities[p[0]], b=cities[p[1]];
+    var pa=proj([a.lon,a.lat]), pb=proj([b.lon,b.lat]);
+    var mx=(pa[0]+pb[0])/2, my=(pa[1]+pb[1])/2;
+    svg.append("path")
+      .attr("d","M"+pa[0]+","+pa[1]+" Q"+mx+","+my+" "+pb[0]+","+pb[1])
+      .attr("fill","none").attr("stroke","#c4a882")
+      .attr("stroke-width",1).attr("stroke-dasharray","4 3").attr("opacity",0.5);
+  });
 
-      // Connector lines
-      var pairs = [[0,1],[0,2],[2,3],[3,4]];
-      pairs.forEach(function(p){
-        var a=cities[p[0]], b=cities[p[1]];
-        var pa=proj([a.lon,a.lat]), pb=proj([b.lon,b.lat]);
-        var mx=(pa[0]+pb[0])/2, my=(pa[1]+pb[1])/2;
-        svg.append("path")
-          .attr("d","M"+pa[0]+","+pa[1]+" Q"+mx+","+my+" "+pb[0]+","+pb[1])
-          .attr("fill","none").attr("stroke","#c4a882")
-          .attr("stroke-width",1).attr("stroke-dasharray","4 3").attr("opacity",0.5);
-      });
+  // 3. Draw City Pins & Tooltips
+  cities.forEach(function(city, i){
+    var pos = proj([city.lon, city.lat]);
+    var cx=pos[0], cy=pos[1];
+    var r = city.hq ? 9 : 7;
+    var col = city.hq ? "#5a3825" : "#8b6a4e";
+    var pulseDelay = i === 0 ? "0s" : (i*0.5)+"s";
 
-      // City pins
-      cities.forEach(function(city, i){
-        var pos = proj([city.lon, city.lat]);
-        var cx=pos[0], cy=pos[1];
-        var r = city.hq ? 9 : 7;
-        var col = city.hq ? "#5a3825" : "#8b6a4e";
-        var pulseDelay = i === 0 ? "0s" : (i*0.5)+"s";
+    var g = svg.append("g").attr("class","city-pin");
 
-        var g = svg.append("g").attr("class","city-pin");
+    g.append("circle").attr("cx",cx).attr("cy",cy).attr("r",r+8)
+      .attr("fill", city.hq ? "rgba(90,56,37,0.15)" : "rgba(139,106,78,0.15)")
+      .attr("class","pin-pulse").style("animation-delay", pulseDelay);
 
-        // Pulse ring
-        g.append("circle").attr("cx",cx).attr("cy",cy).attr("r",r+8)
-          .attr("fill", city.hq ? "rgba(90,56,37,0.15)" : "rgba(139,106,78,0.15)")
-          .attr("class","pin-pulse")
-          .style("animation-delay", pulseDelay);
+    g.append("circle").attr("cx",cx).attr("cy",cy-r).attr("r", r).attr("fill",col).attr("stroke","#fff").attr("stroke-width",1.5);
 
-        // Pin head (circle)
-        g.append("circle").attr("cx",cx).attr("cy",cy-r).attr("rx",r).attr("ry",r+2)
-          .attr("r", r).attr("fill",col).attr("stroke","#fff").attr("stroke-width",1.5);
+    g.append("polygon").attr("points", (cx-r+2)+","+(cy-1)+" "+(cx+r-2)+","+(cy-1)+" "+cx+","+(cy+r+3)).attr("fill",col);
 
-        // Pin tail (triangle pointing down)
-        g.append("polygon")
-          .attr("points", (cx-r+2)+","+(cy-1)+" "+(cx+r-2)+","+(cy-1)+" "+cx+","+(cy+r+3))
-          .attr("fill",col);
+    g.append("text").attr("x", city.side==="right" ? cx+r+8 : cx-r-8)
+      .attr("y",cy-r+4).attr("text-anchor", city.side==="right" ? "start" : "end")
+      .attr("class","pin-label")
+      .style("font-weight", city.hq ? "700" : "600").text(city.name);
 
-        // White inner dot
-        g.append("circle").attr("cx",cx).attr("cy",cy-r)
-          .attr("r", Math.round(r*0.38)).attr("fill","rgba(255,255,255,0.55)");
-
-        // Label
-        var lx = city.side==="right" ? cx+r+8 : cx-r-8;
-        var anchor = city.side==="right" ? "start" : "end";
-        g.append("text").attr("x",lx).attr("y",cy-r+4)
-          .attr("text-anchor",anchor)
-          .attr("class","pin-label")
-          .style("font-weight", city.hq ? "700" : "600")
-          .style("font-size", city.hq ? "12px" : "11px")
-          .style("fill", city.hq ? "#5a3825" : "#3a2f27")
-          .text(city.name);
-
-        // Tooltip
-        g.on("mouseenter", function(){
-          tooltip.textContent = city.name + (city.hq ? " — Headquarters" : " — Active Projects");
-          tooltip.classList.add("show");
-        }).on("mousemove", function(e){
-          var rect = wrapper.getBoundingClientRect();
-          tooltip.style.left = (e.clientX - rect.left)+"px";
-          tooltip.style.top  = (e.clientY - rect.top - 46)+"px";
-        }).on("mouseleave", function(){
-          tooltip.classList.remove("show");
-        });
-      });
-    })
-    .catch(function(){
-      document.querySelector(".tbc-map-wrapper").innerHTML =
-        "<p style='text-align:center;color:#8b6a4e;padding:60px 20px;'>Map unavailable. Please check your connection.</p>";
+    g.on("mouseenter", function(){
+      tooltip.textContent = city.name + (city.hq ? " — Headquarters" : " — Active Projects");
+      tooltip.classList.add("show");
+    }).on("mousemove", function(e){
+      var rect = wrapper.getBoundingClientRect();
+      tooltip.style.left = (e.clientX - rect.left)+"px";
+      tooltip.style.top  = (e.clientY - rect.top - 46)+"px";
+    }).on("mouseleave", function(){
+      tooltip.classList.remove("show");
     });
+  });
 })();
+
 </script>
 
 </body>
