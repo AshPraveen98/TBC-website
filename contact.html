@@ -46,7 +46,7 @@
       </div>
       <div class="contact-item">
         <strong>Email</strong>
-        <p>contact@tbcarch.in</p>
+        <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4724282933262433073325242635242f692e29">[email&#160;protected]</a></p>
       </div>
       <div class="contact-item">
         <strong>Base Location</strong>
@@ -119,10 +119,11 @@
       <h4>Connect</h4>
       <p>Chennai-Bangalore-Puducherry</p>
       <p>+91 9597571740</p>
-      <p><a href="mailto:contact@tbcarch.in?subject=Interior Design Enquiry">contact@tbcarch.in</a></p>
+      <p><a href="/cdn-cgi/l/email-protection#dfbcb0b1abbebcab9fabbdbcbeadbcb7f1b6b1e0acaabdb5babcabe296b1abbaadb6b0adff9bbaacb6b8b1ff9ab1aeaab6ada6"><span class="__cf_email__" data-cfemail="8cefe3e2f8edeff8ccf8eeefedfeefe4a2e5e2">[email&#160;protected]</span></a></p>
     </div>
   </div>
-  <div class="footer-bottom">© 2026 The Baker's Company. All rights reserved.</div>
+  <div class="footer-bottom">    © 2026 The Baker's Company. All rights reserved.
+    <a href="javascript:void(0)" onclick="openPrivacy()" style="color:#a58e7c; text-decoration:none; margin-left:12px;">Privacy Policy</a></div>
 </footer>
 
 <!-- ===== POPUP ===== -->
@@ -141,19 +142,26 @@
         <input type="tel" placeholder="Phone Number" required>
         <input type="email" placeholder="Email Address">
         <textarea rows="3" placeholder="Project details"></textarea>
+        <label style="font-size:13px; color:#7b5d49; display:flex; gap:8px; align-items:flex-start;">
+          <input type="checkbox" required style="margin-top:3px;">
+          I agree to the <a href="javascript:void(0)" onclick="closePopup();openPrivacy();" style="color:var(--tbc-brown);">Privacy Policy</a>
+        </label>
         <button type="submit">Request Consultation</button>
       </form>
     </div>
   </div>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function openPopup(){ document.getElementById('contactPopup').classList.add('active'); }
 function closePopup(){ document.getElementById('contactPopup').classList.remove('active'); }
 function toggleNav(){
   document.getElementById('navLinks').classList.toggle('open');
   document.getElementById('navHamburger').classList.toggle('open');
 }
+function openPrivacy(){ document.getElementById('privacyModal').classList.add('active'); }
+function closePrivacy(){ document.getElementById('privacyModal').classList.remove('active'); }
+
 
 window.addEventListener("scroll", function() {
   const navbar = document.getElementById("tbcNavbar");
@@ -189,19 +197,4 @@ document.getElementById("leadForm").addEventListener("submit", function(e) {
   d.append("entry.1846593654", f[3].value);
   d.append("entry.1890531834", "Contact Page Popup");
   fetch("https://docs.google.com/forms/d/e/1FAIpQLSeW5xAwG0S5nqVI1KMt8gz8Xejyug2edtm_QlY_edKg1JlaXw/formResponse",
-    {method:"POST", mode:"no-cors", body:d});
-  alert("Thank you! TBC will contact you within 24 hours.");
-  closePopup(); f.reset();
-});
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) entry.target.classList.add("active");
-  });
-});
-document.querySelectorAll(".reveal, .reveal-group").forEach(el => observer.observe(el));
-</script>
-
-</body>
-</html>
-
+    {method:"POST", mode:"no-cors", bo
