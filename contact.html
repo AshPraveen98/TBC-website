@@ -36,11 +36,14 @@
 <!-- ===== CONTACT SECTION ===== -->
 <section class="contact-section">
   <div class="contact-container">
-
     <div class="contact-details">
       <h2>Get in touch</h2>
       <p>Planning a new interior project or renovating your space? We'd love to hear about it.</p>
-        <div class="contact-item">
+      <div class="contact-item">
+        <strong>Phone</strong>
+        <p>+91 9597571740</p>
+      </div>
+      <div class="contact-item">
         <strong>Email</strong>
         <p><a href="mailto:contact@tbcarch.in?subject=Interior Design Enquiry">contact@tbcarch.in</a></p>
       </div>
@@ -49,7 +52,6 @@
         <p>Chennai, Tamil Nadu</p>
       </div>
     </div>
-
     <div class="contact-form">
       <form id="contactPageForm">
         <input type="text" placeholder="Your Name" required>
@@ -59,16 +61,102 @@
         <button type="submit">Send Message</button>
       </form>
     </div>
-
   </div>
 </section>
 
-<!-- ===== MAP ===== -->
+<!-- ===== INDIA MAP ===== -->
 <section class="map-section">
   <div class="map-inner">
-    <h2>Based in Chennai</h2>
+    <h2>Where We Work</h2>
     <p>Our design consultations are coordinated from Chennai, with projects executed across multiple cities.</p>
-    <iframe src="https://maps.google.com/maps?q=chennai&t=&z=11&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+
+    <div class="tbc-map-wrapper">
+      <svg class="tbc-india-map" viewBox="0 0 550 620" xmlns="http://www.w3.org/2000/svg">
+
+        <!-- India main body -->
+        <path class="india-shape" d="
+          M200,30 L215,28 L235,32 L260,28 L285,35 L305,30 L325,38 L340,32
+          L355,40 L365,35 L378,45 L385,42 L395,52 L405,48 L415,58 L420,55
+          L428,65 L435,60 L442,72 L448,68 L455,80 L460,78 L465,90 L462,100
+          L468,112 L465,122 L470,132 L467,142 L472,155 L468,165 L473,178
+          L469,190 L474,202 L470,215 L475,228 L471,240 L476,252 L472,265
+          L477,278 L472,290 L476,302 L470,315 L473,328 L467,340 L469,352
+          L462,364 L464,376 L456,388 L457,400 L448,412 L446,424 L436,434
+          L430,445 L418,454 L408,464 L395,472 L382,480 L368,488 L353,494
+          L338,500 L323,505 L308,508 L295,512 L282,510 L270,514 L258,510
+          L246,512 L235,508 L224,504 L213,498 L203,490 L194,480 L186,470
+          L178,458 L172,445 L167,432 L163,418 L160,404 L158,390 L157,376
+          L155,362 L154,348 L152,334 L150,320 L148,306 L146,292 L144,278
+          L142,264 L140,250 L138,236 L136,222 L135,208 L133,194 L132,180
+          L131,166 L130,152 L132,138 L135,124 L138,110 L143,97 L148,85
+          L155,74 L162,64 L170,55 L178,47 L188,40 L200,35 Z"/>
+
+        <!-- Kashmir/North -->
+        <path class="india-shape" d="
+          M285,35 L295,28 L308,22 L322,18 L336,20 L348,16 L358,22 L365,35
+          L355,40 L340,32 L325,38 L305,30 Z"/>
+
+        <!-- Northeast states -->
+        <path class="india-shape" d="
+          M420,55 L435,50 L448,55 L460,62 L468,75 L472,90 L465,90
+          L460,78 L455,80 L448,68 L442,72 L435,60 L428,65 L420,55 Z"/>
+
+        <!-- Sri Lanka -->
+        <path class="india-shape india-island" d="
+          M295,530 L302,526 L308,532 L312,542 L308,552 L300,556
+          L293,550 L290,540 L295,530 Z"/>
+
+        <!-- Connector lines -->
+        <path class="city-connector" d="M295,435 Q290,444 285,456"/>
+        <path class="city-connector" d="M295,435 Q275,433 255,432"/>
+        <path class="city-connector" d="M255,432 Q263,401 272,370"/>
+        <path class="city-connector" d="M272,370 Q235,352 198,338"/>
+
+        <!-- Chennai (HQ) -->
+        <g class="city-pin" data-city="Chennai" data-info="Headquarters">
+          <circle cx="295" cy="435" r="18" class="pin-pulse"/>
+          <circle cx="295" cy="435" r="10" class="pin-dot pin-primary"/>
+          <polygon points="295,415 303,432 295,427 287,432" class="pin-arrow pin-primary-arrow"/>
+          <text x="295" y="405" class="pin-label pin-label-primary">Chennai</text>
+        </g>
+
+        <!-- Puducherry -->
+        <g class="city-pin" data-city="Puducherry" data-info="Active Projects">
+          <circle cx="285" cy="458" r="14" class="pin-pulse pin-pulse-2"/>
+          <circle cx="285" cy="458" r="7" class="pin-dot"/>
+          <polygon points="285,443 291,456 285,451 279,456" class="pin-arrow"/>
+          <text x="240" y="470" class="pin-label">Puducherry</text>
+        </g>
+
+        <!-- Bangalore -->
+        <g class="city-pin" data-city="Bangalore" data-info="Active Projects">
+          <circle cx="255" cy="432" r="14" class="pin-pulse pin-pulse-3"/>
+          <circle cx="255" cy="432" r="7" class="pin-dot"/>
+          <polygon points="255,417 261,430 255,425 249,430" class="pin-arrow"/>
+          <text x="208" y="422" class="pin-label">Bangalore</text>
+        </g>
+
+        <!-- Hyderabad -->
+        <g class="city-pin" data-city="Hyderabad" data-info="Active Projects">
+          <circle cx="272" cy="370" r="14" class="pin-pulse pin-pulse-4"/>
+          <circle cx="272" cy="370" r="7" class="pin-dot"/>
+          <polygon points="272,355 278,368 272,363 266,368" class="pin-arrow"/>
+          <text x="285" y="360" class="pin-label">Hyderabad</text>
+        </g>
+
+        <!-- Mumbai -->
+        <g class="city-pin" data-city="Mumbai" data-info="Active Projects">
+          <circle cx="198" cy="338" r="14" class="pin-pulse pin-pulse-5"/>
+          <circle cx="198" cy="338" r="7" class="pin-dot"/>
+          <polygon points="198,323 204,336 198,331 192,336" class="pin-arrow"/>
+          <text x="152" y="328" class="pin-label">Mumbai</text>
+        </g>
+
+      </svg>
+
+      <div class="map-tooltip" id="mapTooltip"></div>
+    </div>
+
   </div>
 </section>
 
@@ -79,8 +167,9 @@
     <p class="service-area-desc">While our base is in Chennai, we work with clients across several cities through scheduled consultations and site visits.</p>
     <div class="cities">
       <span>Chennai</span>
-      <span>Mumbai</span>
       <span>Puducherry</span>
+      <span>Mumbai</span>
+      <span>Hyderabad</span>
       <span>Bangalore</span>
     </div>
     <p class="consult-note">Consultations are conducted virtually or on-site by appointment.</p>
@@ -113,11 +202,14 @@
     <div class="footer-contact">
       <h4>Connect</h4>
       <p>Chennai-Bangalore-Puducherry</p>
+      <p>+91 9597571740</p>
       <p><a href="mailto:contact@tbcarch.in?subject=Interior Design Enquiry">contact@tbcarch.in</a></p>
     </div>
   </div>
-  <div class="footer-bottom">    © 2026 The Baker's Company. All rights reserved.
-    <a href="javascript:void(0)" onclick="openPrivacy()" style="color:#a58e7c; text-decoration:none; margin-left:12px;">Privacy Policy</a></div>
+  <div class="footer-bottom">
+    © 2026 The Baker's Company. All rights reserved.
+    <a href="javascript:void(0)" onclick="openPrivacy()" style="color:#a58e7c; text-decoration:none; margin-left:12px;">Privacy Policy</a>
+  </div>
 </footer>
 
 <!-- ===== POPUP ===== -->
@@ -146,7 +238,124 @@
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<!-- ===== PRIVACY POLICY MODAL ===== -->
+<div class="privacy-modal-overlay" id="privacyModal">
+  <div class="privacy-modal-box">
+    <button class="privacy-modal-close" onclick="closePrivacy()">✕</button>
+    <h2>Privacy Policy</h2>
+    <span class="privacy-date">Last updated: March 16, 2026</span>
+    <p>This Privacy Notice for <strong>The Bakers Company LLP</strong> describes how and why we might collect, store, use, and/or share your personal information when you visit <a href="https://tbcarch.in">tbcarch.in</a>. Questions? Contact us at <a href="mailto:privacy@tbcarch.in">privacy@tbcarch.in</a>.</p>
+    <h3>1. What Information Do We Collect?</h3>
+    <p>We collect personal information you voluntarily provide, including names, phone numbers, email addresses, and contact data. We also automatically collect device and usage information through cookies and similar technologies.</p>
+    <h3>2. How Do We Process Your Information?</h3>
+    <p>We process your information to provide and improve our Services, communicate with you, manage enquiries, and for security and fraud prevention.</p>
+    <h3>3. When and With Whom Do We Share Your Information?</h3>
+    <p>We may share your data with third-party service providers including <strong>Google Analytics</strong> and <strong>Google AdSense</strong>. We may also share information during a business transfer or acquisition.</p>
+    <h3>4. Cookies and Tracking Technologies</h3>
+    <p>We use cookies and similar tracking technologies for analytics and preferences. To opt out of Google Analytics, visit <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google's opt-out page</a>.</p>
+    <h3>5. How Long Do We Keep Your Information?</h3>
+    <p>We retain your personal information only as long as necessary. When no longer needed, we delete or anonymise it.</p>
+    <h3>6. How Do We Keep Your Information Safe?</h3>
+    <p>We implement appropriate technical and organisational security measures. However, no electronic transmission over the internet is 100% secure.</p>
+    <h3>7. Do We Collect Information from Minors?</h3>
+    <p>We do not knowingly collect data from children under 18. Contact us at <a href="mailto:contact@tbcarch.in">contact@tbcarch.in</a> if you believe we have collected data from a minor.</p>
+    <h3>8. Your Privacy Rights</h3>
+    <p>You may withdraw consent, request access to your data, correct inaccuracies, or request deletion at any time by contacting us at <a href="mailto:privacy@tbcarch.in">privacy@tbcarch.in</a>.</p>
+    <h3>9. Contact Us</h3>
+    <p>Email us at <a href="mailto:contact@tbcarch.in">contact@tbcarch.in</a><br><strong>The Bakers Company LLP</strong>, Chennai, Tamil Nadu – 600023, India</p>
+    <h3>10. Review, Update, or Delete Your Data</h3>
+    <p>Submit a <a href="https://app.termly.io/dsar/2c2ed243-5725-4bda-b384-a98fe0f6f538" target="_blank" rel="noopener">data subject access request</a>.</p>
+  </div>
+</div>
+
+<!-- ===== MAP CSS ===== -->
+<style>
+.tbc-map-wrapper {
+  position: relative;
+  margin-top: 36px;
+  display: flex;
+  justify-content: center;
+}
+.tbc-india-map {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  filter: drop-shadow(0 16px 40px rgba(0,0,0,0.10));
+}
+.india-shape {
+  fill: #e8ddd0;
+  stroke: #c4a882;
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+}
+.india-island { fill: #ddd0c0; }
+.city-connector {
+  fill: none;
+  stroke: #c4a882;
+  stroke-width: 1;
+  stroke-dasharray: 4 3;
+  opacity: 0.5;
+}
+.pin-pulse {
+  fill: rgba(139,106,78,0.15);
+  animation: mapPulse 2.5s ease-in-out infinite;
+}
+.pin-pulse-2 { animation-delay: 0.5s; }
+.pin-pulse-3 { animation-delay: 1.0s; }
+.pin-pulse-4 { animation-delay: 1.5s; }
+.pin-pulse-5 { animation-delay: 2.0s; }
+@keyframes mapPulse {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.1; transform: scale(1.4); }
+}
+.pin-dot {
+  fill: #8b6a4e;
+  stroke: #fff;
+  stroke-width: 2;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.pin-primary { fill: #5a3825; }
+.pin-arrow { fill: #8b6a4e; }
+.pin-primary-arrow { fill: #5a3825; }
+.pin-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  fill: #3a2f27;
+  letter-spacing: 0.3px;
+}
+.pin-label-primary {
+  font-size: 12px;
+  font-weight: 700;
+  fill: #5a3825;
+}
+.city-pin { cursor: pointer; }
+.city-pin:hover .pin-dot { fill: #5a3825; }
+.map-tooltip {
+  position: absolute;
+  background: #3a2f27;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  white-space: nowrap;
+  z-index: 10;
+  transform: translateX(-50%);
+}
+.map-tooltip.show { opacity: 1; }
+@media (max-width: 768px) {
+  .tbc-india-map { max-width: 320px; }
+  .pin-label { font-size: 9px; }
+}
+</style>
+
+<!-- ===== SCRIPTS ===== -->
+<script>
 function openPopup(){ document.getElementById('contactPopup').classList.add('active'); }
 function closePopup(){ document.getElementById('contactPopup').classList.remove('active'); }
 function toggleNav(){
@@ -155,7 +364,6 @@ function toggleNav(){
 }
 function openPrivacy(){ document.getElementById('privacyModal').classList.add('active'); }
 function closePrivacy(){ document.getElementById('privacyModal').classList.remove('active'); }
-
 
 window.addEventListener("scroll", function() {
   const navbar = document.getElementById("tbcNavbar");
@@ -191,7 +399,39 @@ document.getElementById("leadForm").addEventListener("submit", function(e) {
   d.append("entry.1846593654", f[3].value);
   d.append("entry.1890531834", "Contact Page Popup");
   fetch("https://docs.google.com/forms/d/e/1FAIpQLSeW5xAwG0S5nqVI1KMt8gz8Xejyug2edtm_QlY_edKg1JlaXw/formResponse",
-    {method:"POST", mode:"no-cors", bo
+    {method:"POST", mode:"no-cors", body:d});
+  alert("Thank you! TBC will contact you within 24 hours.");
+  closePopup(); f.reset();
+});
 
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add("active");
+  });
+});
+document.querySelectorAll(".reveal, .reveal-group").forEach(el => observer.observe(el));
 
+// Map tooltip
+document.querySelectorAll('.city-pin').forEach(pin => {
+  const city = pin.getAttribute('data-city');
+  const info = pin.getAttribute('data-info');
+  const tooltip = document.getElementById('mapTooltip');
+  const wrapper = document.querySelector('.tbc-map-wrapper');
 
+  pin.addEventListener('mouseenter', () => {
+    tooltip.textContent = city + (city === 'Chennai' ? ' — Headquarters' : ' — Active Projects');
+    tooltip.classList.add('show');
+  });
+  pin.addEventListener('mousemove', (e) => {
+    const rect = wrapper.getBoundingClientRect();
+    tooltip.style.left = (e.clientX - rect.left) + 'px';
+    tooltip.style.top = (e.clientY - rect.top - 44) + 'px';
+  });
+  pin.addEventListener('mouseleave', () => {
+    tooltip.classList.remove('show');
+  });
+});
+</script>
+
+</body>
+</html>
