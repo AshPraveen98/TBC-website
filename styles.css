@@ -1035,16 +1035,15 @@ cursor:pointer;
   position: relative;
   display: flex;
   justify-content: center;
-  overflow: hidden;
+  margin-top: 8px;
 }
 
 .tbc-india-map {
-  width: 380px;
-  max-width: 90%;
+  width: 420px;
+  max-width: 84%;
   height: auto;
   display: block;
-  margin: 0 auto;
-  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.10));
+  filter: drop-shadow(0 6px 20px rgba(0,0,0,0.09));
 }
 
 /* States */
