@@ -4,58 +4,45 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Projects | The Baker's Company</title>
-
 <link rel="stylesheet" href="styles.css">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
+<!-- ===== NAVBAR ===== -->
 <header class="tbc-navbar" id="tbcNavbar">
   <div class="nav-container">
-
-    <div class="logo">
-      TBC The Baker's Company
-    </div>
-
-    <nav class="nav-links">
+    <div class="logo">TBC The Baker's Company</div>
+    <nav class="nav-links" id="navLinks">
       <a href="index.html">Home</a>
       <a href="projects.html">Projects</a>
       <a href="services.html">Services</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-      <a href="javascript:void(0)" onclick="openPopup()" class="tbc-nav-cta">
-Book Consultation
-</a>
+      <a href="javascript:void(0)" onclick="openPopup()" class="tbc-nav-cta">Book Consultation</a>
     </nav>
-
+    <button class="nav-hamburger" id="navHamburger" onclick="toggleNav()" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
-<!-- PAGE HERO -->
+<!-- ===== HERO ===== -->
 <section class="hero">
-
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
-
   <div class="hero-content">
     <div class="hero-brand">TBC PROJECTS</div>
-
-    <h1>Spaces We’ve Brought to Life</h1>
-
-    <p>
-      A curated collection of residential and commercial interiors
-      designed with clarity, warmth, and craftsmanship.
-    </p>
+    <h1>Spaces We've Brought to Life</h1>
+    <p>A curated collection of residential and commercial interiors designed with clarity, warmth, and craftsmanship.</p>
   </div>
-
 </section>
 
-<!-- ===== POLAROID PROJECT GRID ===== -->
+<!-- ===== PROJECT GRID ===== -->
 <section class="polaroid-section">
   <div class="polaroid-grid">
 
-    <div class="polaroid-card reveal-group">
+    <div class="polaroid-card reveal">
       <div class="polaroid-img"></div>
       <div class="polaroid-caption">
         <h4>Urban Luxe Residence</h4>
@@ -63,7 +50,7 @@ Book Consultation
       </div>
     </div>
 
-    <div class="polaroid-card reveal-group">
+    <div class="polaroid-card reveal">
       <div class="polaroid-img"></div>
       <div class="polaroid-caption">
         <h4>The Minimal Haven</h4>
@@ -71,7 +58,7 @@ Book Consultation
       </div>
     </div>
 
-    <div class="polaroid-card reveal-group">
+    <div class="polaroid-card reveal">
       <div class="polaroid-img"></div>
       <div class="polaroid-caption">
         <h4>Studio Workspace</h4>
@@ -79,7 +66,7 @@ Book Consultation
       </div>
     </div>
 
-    <div class="polaroid-card reveal-group">
+    <div class="polaroid-card reveal">
       <div class="polaroid-img"></div>
       <div class="polaroid-caption">
         <h4>Warm Modern Bedroom</h4>
@@ -89,15 +76,14 @@ Book Consultation
 
   </div>
 </section>
+
+<!-- ===== FOOTER ===== -->
 <footer class="site-footer">
-
   <div class="footer-container">
-
     <div class="footer-brand">
       <h3>TBC The Baker's Company</h3>
       <p>Designing spaces that feel like home.</p>
     </div>
-
     <div class="footer-links">
       <h4>Explore</h4>
       <a href="index.html">Home</a>
@@ -106,56 +92,27 @@ Book Consultation
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </div>
-
     <div class="footer-contact">
       <h4>Connect</h4>
-      <p>Nasik, Maharashtra</p>
+      <p>Chennai-Bangalore-Puducherry</p>
       <p>+91 9597571740</p>
-      <p>thebakerscompany@gmail.com</p>
+      <p>contact@tbcarch.in</p>
     </div>
-
   </div>
-
-  <div class="footer-bottom">
-    © 2026 The Baker's Company. All rights reserved.
-  </div>
-
+  <div class="footer-bottom">© 2026 The Baker's Company. All rights reserved.</div>
 </footer>
-<script>
-  window.addEventListener("scroll", function() {
-    const navbar = document.getElementById("tbcNavbar");
 
-    if (window.scrollY > 50) {
-      navbar.style.background = "rgba(248, 244, 236, 0.85)";
-      navbar.style.boxShadow = "0 10px 30px rgba(0,0,0,0.06)";
-    } else {
-      navbar.style.background = "rgba(248, 244, 236, 0.65)";
-      navbar.style.boxShadow = "none";
-    }
-  });
-</script>
-  <!-- ================= POPUP ================= -->
+<!-- ===== POPUP ===== -->
 <div class="popup-overlay" id="contactPopup">
-
   <div class="popup-box">
-
     <div class="popup-left">
       <div class="popup-brand">TBC</div>
       <h3>Design Begins With a Conversation</h3>
-      <p>
-        Tell us about your space and aspirations.
-        Our team will reach out within 24 hours.
-      </p>
-
-      <div class="popup-materials">
-        Timber • Brick • Concrete
-      </div>
+      <p>Tell us about your space and aspirations. Our team will reach out within 24 hours.</p>
+      <div class="popup-materials">Timber • Brick • Concrete</div>
     </div>
-
     <div class="popup-right">
-
       <div class="popup-close" onclick="closePopup()">✕</div>
-
       <form class="popup-form" id="leadForm">
         <input type="text" placeholder="Your Name" required>
         <input type="tel" placeholder="Phone Number" required>
@@ -163,52 +120,50 @@ Book Consultation
         <textarea rows="3" placeholder="Project details"></textarea>
         <button type="submit">Request Consultation</button>
       </form>
-
     </div>
-
   </div>
-
 </div>
+
 <script>
-
-function openPopup(){
-document.getElementById('contactPopup').classList.add('active');
+function openPopup(){ document.getElementById('contactPopup').classList.add('active'); }
+function closePopup(){ document.getElementById('contactPopup').classList.remove('active'); }
+function toggleNav(){
+  document.getElementById('navLinks').classList.toggle('open');
+  document.getElementById('navHamburger').classList.toggle('open');
 }
 
-function closePopup(){
-document.getElementById('contactPopup').classList.remove('active');
-}
-
-</script>
-<script>
-
-const observer = new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("active");
-}
-});
+window.addEventListener("scroll", function() {
+  const navbar = document.getElementById("tbcNavbar");
+  if (window.scrollY > 50) {
+    navbar.style.background = "rgba(248,244,236,0.85)";
+    navbar.style.boxShadow = "0 10px 30px rgba(0,0,0,0.06)";
+  } else {
+    navbar.style.background = "rgba(248,244,236,0.65)";
+    navbar.style.boxShadow = "none";
+  }
 });
 
-document.querySelectorAll(".reveal, .reveal-group")
-.forEach(el=>observer.observe(el));
+document.getElementById("leadForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  const f = this; const d = new FormData();
+  d.append("entry.735551418", f[0].value);
+  d.append("entry.930599246", f[1].value);
+  d.append("entry.672421389", f[2].value);
+  d.append("entry.1846593654", f[3].value);
+  d.append("entry.1890531834", "Projects Page Popup");
+  fetch("https://docs.google.com/forms/d/e/1FAIpQLSeW5xAwG0S5nqVI1KMt8gz8Xejyug2edtm_QlY_edKg1JlaXw/formResponse",
+    {method:"POST", mode:"no-cors", body:d});
+  alert("Thank you! TBC will contact you within 24 hours.");
+  closePopup(); f.reset();
+});
 
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add("active");
+  });
+});
+document.querySelectorAll(".reveal, .reveal-group").forEach(el => observer.observe(el));
 </script>
+
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
