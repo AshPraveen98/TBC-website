@@ -1030,16 +1030,6 @@ cursor:pointer;
   line-height: 1.65;
 }
 
-/* Map frame */
-.tbc-map-frame {
-  background: #fff;
-  border: 1.5px solid #d4c4b0;
-  border-radius: 16px;
-  padding: 32px;
-  display: inline-block;
-  position: relative;
-}
-
 /* Map wrapper & SVG */
 .tbc-map-wrapper {
   position: relative;
@@ -1055,6 +1045,7 @@ cursor:pointer;
   overflow: visible;
   position: relative;
   z-index: 1;
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.10));
 }
 
 /* States */
@@ -1848,7 +1839,6 @@ box-shadow:0 10px 20px rgba(0,0,0,0.12);
 
 @media (max-width: 768px) {
   .map-heading h2    { font-size: 30px; }
-  .tbc-map-frame     { padding: 20px; border-radius: 12px; }
   .tbc-india-map     { max-width: 100%; }
   .pin-label         { font-size: 10px; }
   .hq-label          { font-size: 11px; }
