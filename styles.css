@@ -1038,13 +1038,12 @@ cursor:pointer;
 }
 
 .tbc-india-map {
-  width: 100%;
-  max-width: 560px;
+  width: 380px;
+  max-width: 90%;
   height: auto;
   display: block;
   overflow: visible;
-  position: relative;
-  z-index: 1;
+  margin: 0 auto;
   filter: drop-shadow(0 8px 24px rgba(0,0,0,0.10));
 }
 
