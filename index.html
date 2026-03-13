@@ -28,7 +28,9 @@ gtag('config', 'G-XXXXXXXXXX');
   <div class="nav-container">
 
     <div class="logo">
-      TBC The Baker's Company
+      <a href="index.html" class="logo-link">
+        <img src="images/tbc-logo-dark.svg" alt="The Baker's Company" class="nav-logo" height="36">
+      </a>
     </div>
 
     <nav class="nav-links">
@@ -252,7 +254,9 @@ gtag('config', 'G-XXXXXXXXXX');
   <div class="popup-box">
 
     <div class="popup-left">
-      <div class="popup-brand">TBC</div>
+      <div class="popup-brand">
+        <img src="images/tbc-logo-light.svg" alt="The Baker's Company" class="popup-logo" height="40">
+      </div>
       <h3>Design Begins With a Conversation</h3>
       <p>
         Tell us about your space and aspirations.
@@ -342,7 +346,7 @@ navbar.style.boxShadow = "none";
   <div class="footer-container">
 
     <div class="footer-brand">
-      <h3>TBC The Baker's Company</h3>
+      <img src="images/tbc-logo-light.svg" alt="The Baker's Company" class="footer-logo" height="44">
       <p>Designing spaces that feel like home.</p>
     </div>
 
@@ -385,4 +389,14 @@ document.querySelectorAll(".reveal, .reveal-group")
 </script>
 <script>
 
-const
+const hero = document.querySelector(".hero");
+
+window.addEventListener("scroll", () => {
+  if (!hero) return;
+  const offset = window.scrollY * 0.2;
+  hero.style.transform = `translateY(${offset}px)`;
+});
+
+</script>
+</body>
+</html>
