@@ -1994,3 +1994,37 @@ box-shadow:0 10px 20px rgba(0,0,0,0.12);
     max-height: 88vh;
   }
 }
+/* ================= LOGO ================= */
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nav-logo {
+  height: 36px;
+  width: auto;
+  display: block;
+  /* Slight dark tint on scroll handled by existing navbar JS */
+}
+
+.popup-logo {
+  height: 40px;
+  width: auto;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.footer-logo {
+  height: 44px;
+  width: auto;
+  display: block;
+  margin-bottom: 12px;
+  opacity: 0.92;
+}
+
+@media (max-width: 768px) {
+  .nav-logo  { height: 28px; }
+  .popup-logo { height: 32px; }
+  .footer-logo { height: 36px; }
+}
