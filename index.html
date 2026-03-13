@@ -99,16 +99,144 @@ gtag('config', 'G-XXXXXXXXXX');
 </section>
 
 
-<!-- ================= TESTIMONIAL STRIP ================= -->
-<section class="testimonial-strip reveal">
+<!-- ================= TESTIMONIAL CAROUSEL ================= -->
+<section class="testimonial-strip">
   <div class="container">
-    <blockquote>
-      “TBC handled our home with clarity and professionalism. 
-      The execution quality exceeded our expectations.”
-    </blockquote>
-    <p class="testimonial-author">— Homeowner, Nashik</p>
+
+    <div class="testi-carousel" id="testiCarousel">
+
+      <div class="testi-slide active">
+        <blockquote>“TBC handled our home with clarity and professionalism. The execution quality exceeded our expectations.”</blockquote>
+        <p class="testimonial-author">— Homeowner, Nashik</p>
+      </div>
+
+      <div class="testi-slide">
+        <blockquote>“Every detail was thought through. From the material palette to the final finish — it felt effortless.”</blockquote>
+        <p class="testimonial-author">— Apartment Owner, Chennai</p>
+      </div>
+
+      <div class="testi-slide">
+        <blockquote>“They truly listened. The space they designed reflects who we are — warm, functional, and beautiful.”</blockquote>
+        <p class="testimonial-author">— Villa Client, Bangalore</p>
+      </div>
+
+      <div class="testi-slide">
+        <blockquote>“The team was disciplined with timelines and transparent throughout. Rare to find that in interior work.”</blockquote>
+        <p class="testimonial-author">— Commercial Client, Puducherry</p>
+      </div>
+
+    </div>
+
+    <div class="testi-dots" id="testiDots">
+      <button class="testi-dot active" onclick="goToSlide(0)" aria-label="Testimonial 1"></button>
+      <button class="testi-dot" onclick="goToSlide(1)" aria-label="Testimonial 2"></button>
+      <button class="testi-dot" onclick="goToSlide(2)" aria-label="Testimonial 3"></button>
+      <button class="testi-dot" onclick="goToSlide(3)" aria-label="Testimonial 4"></button>
+    </div>
+
   </div>
 </section>
+
+<script>
+(function(){
+  let current = 0;
+  const slides = document.querySelectorAll(".testi-slide");
+  const dots   = document.querySelectorAll(".testi-dot");
+  let timer    = setInterval(next, 4500);
+
+  function goTo(n){
+    slides[current].classList.remove("active");
+    dots[current].classList.remove("active");
+    current = (n + slides.length) % slides.length;
+    slides[current].classList.add("active");
+    dots[current].classList.add("active");
+  }
+
+  function next(){ goTo(current + 1); }
+
+  window.goToSlide = function(n){
+    clearInterval(timer);
+    goTo(n);
+    timer = setInterval(next, 4500);
+  };
+
+  const section = document.getElementById("testiCarousel");
+  if(section){
+    section.addEventListener("mouseenter", () => clearInterval(timer));
+    section.addEventListener("mouseleave", () => { timer = setInterval(next, 4500); });
+  }
+})();
+</script>
+
+
+<!-- ================= INSTAGRAM CAROUSEL ================= -->
+<section class="instagram-section">
+  <div class="instagram-container">
+    <div class="instagram-header">
+      <h2>Follow Our Work</h2>
+      <p><a href="https://instagram.com/thebakerscompany" target="_blank" rel="noopener">@thebakerscompany</a></p>
+    </div>
+  </div>
+
+  <!-- Carousel track (overflows full width) -->
+  <div class="insta-carousel-wrapper">
+    <div class="insta-track" id="instaTrack">
+      <!-- Original set -->
+      <div class="insta-slide"><img src="images/insta1.jpg" alt="TBC project"></div>
+      <div class="insta-slide"><img src="images/insta2.jpg" alt="TBC project"></div>
+      <div class="insta-slide"><img src="images/insta3.jpg" alt="TBC project"></div>
+      <div class="insta-slide"><img src="images/insta4.jpg" alt="TBC project"></div>
+      <div class="insta-slide"><img src="images/insta5.jpg" alt="TBC project"></div>
+      <div class="insta-slide"><img src="images/insta6.jpg" alt="TBC project"></div>
+      <!-- Cloned set for seamless loop -->
+      <div class="insta-slide" aria-hidden="true"><img src="images/insta1.jpg" alt=""></div>
+      <div class="insta-slide" aria-hidden="true"><img src="images/insta2.jpg" alt=""></div>
+      <div class="insta-slide" aria-hidden="true"><img src="images/insta3.jpg" alt=""></div>
+      <div class="insta-slide" aria-hidden="true"><img src="images/insta4.jpg" alt=""></div>
+      <div class="insta-slide" aria-hidden="true"><img src="images/insta5.jpg" alt=""></div>
+      <div class="insta-slide" aria-hidden="true"><img src="images/insta6.jpg" alt=""></div>
+    </div>
+
+    <!-- Edge fade overlays -->
+    <div class="insta-fade insta-fade-left"></div>
+    <div class="insta-fade insta-fade-right"></div>
+  </div>
+</section>
+
+
+<script>
+/* ── Drag-to-scroll on carousel ── */
+(function(){
+  const wrapper = document.querySelector('.insta-carousel-wrapper');
+  const track   = document.getElementById('instaTrack');
+  if(!wrapper || !track) return;
+
+  let isDragging = false, startX = 0, scrollLeft = 0, dragOffset = 0;
+
+  wrapper.addEventListener('mousedown', e => {
+    isDragging = true;
+    startX = e.pageX;
+    dragOffset = parseFloat(track.style.marginLeft || 0);
+    track.style.animationPlayState = 'paused';
+  });
+  window.addEventListener('mousemove', e => {
+    if(!isDragging) return;
+    const delta = e.pageX - startX;
+    track.style.marginLeft = (dragOffset + delta) + 'px';
+  });
+  window.addEventListener('mouseup', () => {
+    if(!isDragging) return;
+    isDragging = false;
+    track.style.animationPlayState = '';
+    track.style.marginLeft = '';
+  });
+
+  /* Touch support */
+  wrapper.addEventListener('touchstart', e => { startX = e.touches[0].pageX; dragOffset = parseFloat(track.style.marginLeft||0); track.style.animationPlayState='paused'; }, {passive:true});
+  wrapper.addEventListener('touchmove',  e => { const delta = e.touches[0].pageX - startX; track.style.marginLeft=(dragOffset+delta)+'px'; }, {passive:true});
+  wrapper.addEventListener('touchend',   () => { track.style.animationPlayState=''; track.style.marginLeft=''; });
+})();
+</script>
 
 <!-- ================= FLOATING CTA ================= -->
 <div class="floating-cta" id="floatingCTA">
@@ -208,40 +336,6 @@ navbar.style.boxShadow = "none";
 
 });
 
-<script>
-/* ── Drag-to-scroll on carousel ── */
-(function(){
-  const wrapper = document.querySelector('.insta-carousel-wrapper');
-  const track   = document.getElementById('instaTrack');
-  if(!wrapper || !track) return;
- 
-  let isDragging = false, startX = 0, scrollLeft = 0, dragOffset = 0;
- 
-  wrapper.addEventListener('mousedown', e => {
-    isDragging = true;
-    startX = e.pageX;
-    dragOffset = parseFloat(track.style.marginLeft || 0);
-    track.style.animationPlayState = 'paused';
-  });
-  window.addEventListener('mousemove', e => {
-    if(!isDragging) return;
-    const delta = e.pageX - startX;
-    track.style.marginLeft = (dragOffset + delta) + 'px';
-  });
-  window.addEventListener('mouseup', () => {
-    if(!isDragging) return;
-    isDragging = false;
-    track.style.animationPlayState = '';
-    track.style.marginLeft = '';
-  });
- 
-  /* Touch support */
-  wrapper.addEventListener('touchstart', e => { startX = e.touches[0].pageX; dragOffset = parseFloat(track.style.marginLeft||0); track.style.animationPlayState='paused'; }, {passive:true});
-  wrapper.addEventListener('touchmove',  e => { const delta = e.touches[0].pageX - startX; track.style.marginLeft=(dragOffset+delta)+'px'; }, {passive:true});
-  wrapper.addEventListener('touchend',   () => { track.style.animationPlayState=''; track.style.marginLeft=''; });
-})();
-</script>
-
 </script>
 <footer class="site-footer">
 
@@ -265,7 +359,7 @@ navbar.style.boxShadow = "none";
       <h4>Connect</h4>
       <p>Chennai-Bangalore-Puducherry</p>
       <p>+91 9597571740</p>
-      <p>contact@tbcarch.in</p>
+      <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d9bab6b7adb8baad99adbbbab8abbab1f7b0b7">[email&#160;protected]</a></p>
     </div>
 
   </div>
@@ -275,7 +369,7 @@ navbar.style.boxShadow = "none";
   </div>
 
 </footer>
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 
 const observer = new IntersectionObserver(entries=>{
 entries.forEach(entry=>{
@@ -291,19 +385,4 @@ document.querySelectorAll(".reveal, .reveal-group")
 </script>
 <script>
 
-const hero=document.querySelector(".hero");
-
-window.addEventListener("scroll",()=>{
-
-if(!hero)return;
-
-const offset=window.scrollY * 0.2;
-
-hero.style.transform=`translateY(${offset}px)`;
-
-});
-
-</script>
-</body>
-
-</html>
+const
