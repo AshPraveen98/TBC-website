@@ -4,200 +4,254 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Baker's Company (TBC)</title>
+
 <link rel="stylesheet" href="styles.css">
+
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GBLX5P2NH6"></script>
+<!-- GA4 (paste your ID later) -->
+<!--
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-GBLX5P2NH6');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXXXXX');
 </script>
+-->
+
 </head>
 <body>
 
-<!-- ===== NAVBAR ===== -->
+<!-- ===== TBC NAVBAR ===== -->
 <header class="tbc-navbar" id="tbcNavbar">
   <div class="nav-container">
-    <div class="logo">TBC The Baker's Company</div>
-    <nav class="nav-links" id="navLinks">
+
+    <div class="logo">
+      TBC The Baker's Company
+    </div>
+
+    <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="projects.html">Projects</a>
       <a href="services.html">Services</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-      <a href="javascript:void(0)" onclick="openPopup()" class="tbc-nav-cta">Book Consultation</a>
+      <a href="javascript:void(0)" onclick="openPopup()" class="tbc-nav-cta">
+         Book Consultation
+      </a>
     </nav>
-    <button class="nav-hamburger" id="navHamburger" onclick="toggleNav()" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
+
   </div>
 </header>
 
-<!-- ===== HERO ===== -->
+<!-- ================= HERO ================= -->
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
+
   <div class="hero-content">
     <div class="hero-brand">THE BAKER'S COMPANY • TBC</div>
     <h1>Thoughtful Interiors.<br>Timeless Living.</h1>
     <p>Residential and commercial interiors crafted with warmth, precision, and love.</p>
-  </div>
+
+    </div>
 </section>
 
-<!-- ===== PROCESS SECTION ===== -->
+  <!-- ================= PROCESS SECTION ================= -->
 <section class="process-section">
   <div class="container">
+
     <div class="section-header reveal">
       <h2>Our Design Process</h2>
       <p>A structured journey from concept to completion.</p>
     </div>
+
     <div class="process-grid reveal-group">
+
       <div class="process-card">
         <span>01</span>
         <h4>Discover</h4>
         <p>We understand your lifestyle, aspirations, and functional needs.</p>
       </div>
+
       <div class="process-card">
         <span>02</span>
         <h4>Design</h4>
         <p>Layouts, materials, and aesthetics are carefully curated for you.</p>
       </div>
+
       <div class="process-card">
         <span>03</span>
         <h4>Execute</h4>
         <p>We manage timelines, vendors, and site quality with discipline.</p>
       </div>
+
       <div class="process-card">
         <span>04</span>
         <h4>Deliver</h4>
         <p>Your completed home, refined and ready to live beautifully.</p>
       </div>
+
     </div>
+
   </div>
 </section>
 
-<!-- ===== TESTIMONIAL STRIP ===== -->
+
+<!-- ================= TESTIMONIAL STRIP ================= -->
 <section class="testimonial-strip reveal">
   <div class="container">
     <blockquote>
-      "TBC handled our home with clarity and professionalism.
-      The execution quality exceeded our expectations."
+      “TBC handled our home with clarity and professionalism. 
+      The execution quality exceeded our expectations.”
     </blockquote>
     <p class="testimonial-author">— Homeowner, Nashik</p>
   </div>
 </section>
 
-<!-- ===== INSTAGRAM ===== -->
-<section class="instagram-section">
-  <div class="instagram-container">
-    <div class="instagram-header">
-      <h2>Follow Our Work</h2>
-      <p>@thebakerscompany</p>
-    </div>
-    <div class="instagram-grid">
-      <img src="images/insta1.jpg" alt="TBC project 1">
-      <img src="images/insta2.jpg" alt="TBC project 2">
-      <img src="images/insta3.jpg" alt="TBC project 3">
-      <img src="images/insta4.jpg" alt="TBC project 4">
-      <img src="images/insta5.jpg" alt="TBC project 5">
-      <img src="images/insta6.jpg" alt="TBC project 6">
-    </div>
-  </div>
-</section>
-
-<!-- ===== FLOATING CTA ===== -->
+<!-- ================= FLOATING CTA ================= -->
 <div class="floating-cta" id="floatingCTA">
+
   <a href="javascript:void(0)" onclick="openPopup()" class="floating-btn floating-consult">
     📅 <span>Book Consultation</span>
   </a>
 </div>
 
-<!-- ===== POPUP ===== -->
+<!-- ================= POPUP ================= -->
 <div class="popup-overlay" id="contactPopup">
+
   <div class="popup-box">
+
     <div class="popup-left">
       <div class="popup-brand">TBC</div>
       <h3>Design Begins With a Conversation</h3>
-      <p>Tell us about your space and aspirations. Our team will reach out within 24 hours.</p>
-      <div class="popup-materials">Timber • Brick • Concrete</div>
+      <p>
+        Tell us about your space and aspirations.
+        Our team will reach out within 24 hours.
+      </p>
+
+      <div class="popup-materials">
+        Timber • Brick • Concrete
+      </div>
     </div>
+
     <div class="popup-right">
+
       <div class="popup-close" onclick="closePopup()">✕</div>
+
       <form class="popup-form" id="leadForm">
         <input type="text" placeholder="Your Name" required>
         <input type="tel" placeholder="Phone Number" required>
         <input type="email" placeholder="Email Address">
         <textarea rows="3" placeholder="Project details"></textarea>
-        <label style="font-size:13px; color:#7b5d49; display:flex; gap:8px; align-items:flex-start;">
-          <input type="checkbox" required style="margin-top:3px;">
-          I agree to the <a href="javascript:void(0)" onclick="closePopup();openPrivacy();" style="color:var(--tbc-brown);">Privacy Policy</a>
-        </label>
         <button type="submit">Request Consultation</button>
       </form>
+
     </div>
+
   </div>
+
 </div>
 
-<!-- ===== PRIVACY POLICY MODAL ===== -->
-<div class="privacy-modal-overlay" id="privacyModal">
-  <div class="privacy-modal-box">
-    <button class="privacy-modal-close" onclick="closePrivacy()">✕</button>
-    <h2>Privacy Policy</h2>
-    <span class="privacy-date">Last updated: March 16, 2026</span>
+<!-- ================= SCRIPTS ================= -->
+<script>
+function openPopup(){document.getElementById('contactPopup').classList.add('active');}
+function closePopup(){document.getElementById('contactPopup').classList.remove('active');}
 
-    <p>This Privacy Notice for <strong>The Bakers Company LLP</strong> ('we', 'us', or 'our') describes how and why we might collect, store, use, and/or share your personal information when you use our services, including when you visit <a href="https://tbcarch.in">tbcarch.in</a>. Questions? Contact us at <a href="mailto:privacy@tbcarch.in">privacy@tbcarch.in</a>.</p>
+window.addEventListener('scroll',()=>{
+  if(window.scrollY>300){floatingCTA.classList.add('show')}
+  else{floatingCTA.classList.remove('show')}
+});
 
-    <h3>1. What Information Do We Collect?</h3>
-    <p>We collect personal information you voluntarily provide, including names, phone numbers, email addresses, and contact data. We also automatically collect certain device and usage information (IP address, browser type, location) through cookies and similar technologies.</p>
+function trackWhatsApp(){
+  if(typeof gtag!=="undefined"){
+    gtag("event","whatsapp_click",{event_category:"Lead"});
+  }
+}
 
-    <h3>2. How Do We Process Your Information?</h3>
-    <p>We process your information to provide and improve our Services, communicate with you, manage enquiries, and for security and fraud prevention. We process your information only when we have a valid legal reason to do so.</p>
+document.getElementById("leadForm").addEventListener("submit",function(e){
+  e.preventDefault();
+  const f=this; const d=new FormData();
 
-    <h3>3. When and With Whom Do We Share Your Information?</h3>
-    <p>We may share your data with third-party service providers who perform services on our behalf, including <strong>Google Analytics</strong> (web analytics) and <strong>Google AdSense</strong> (advertising). We may also share information during a business transfer or acquisition.</p>
+  d.append("entry.735551418",f[0].value);
+  d.append("entry.930599246",f[1].value);
+  d.append("entry.672421389",f[2].value);
+  d.append("entry.1846593654",f[3].value);
+  d.append("entry.1890531834","Website Popup");
 
-    <h3>4. Cookies and Tracking Technologies</h3>
-    <p>We use cookies and similar tracking technologies to maintain security, save preferences, and assist with analytics. We use Google Analytics, including Demographics and Interests Reporting. To opt out, visit <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google's opt-out page</a>.</p>
+  fetch("https://docs.google.com/forms/d/e/1FAIpQLSeW5xAwG0S5nqVI1KMt8gz8Xejyug2edtm_QlY_edKg1JlaXw/formResponse",
+  {method:"POST",mode:"no-cors",body:d});
 
-    <h3>5. How Long Do We Keep Your Information?</h3>
-    <p>We retain your personal information only as long as necessary for the purposes outlined in this notice, or as required by law. When no longer needed, we delete or anonymise it.</p>
+  alert("Thank you! TBC will contact you within 24 hours.");
+  closePopup(); f.reset();
+});
+</script>
+<script>
 
-    <h3>6. How Do We Keep Your Information Safe?</h3>
-    <p>We implement appropriate technical and organisational security measures. However, no electronic transmission over the internet is 100% secure. You access our Services at your own risk.</p>
+window.addEventListener("scroll", function(){
 
-    <h3>7. Do We Collect Information from Minors?</h3>
-    <p>We do not knowingly collect data from children under 18. By using our Services, you confirm you are at least 18 years old. Contact us at <a href="mailto:contact@tbcarch.in">contact@tbcarch.in</a> if you believe we have collected data from a minor.</p>
+const navbar = document.getElementById("tbcNavbar");
 
-    <h3>8. Your Privacy Rights</h3>
-    <p>You may withdraw consent, request access to your data, correct inaccuracies, or request deletion at any time by contacting us at <a href="mailto:privacy@tbcarch.in">privacy@tbcarch.in</a>. You may also manage cookie preferences through your browser settings.</p>
+if(window.scrollY > 80){
 
-    <h3>9. Do-Not-Track Features</h3>
-    <p>We do not currently respond to DNT browser signals as no uniform standard has been finalised. If a standard is adopted in the future, we will update this notice accordingly.</p>
+navbar.style.background = "rgba(248,244,236,0.9)";
+navbar.style.backdropFilter = "blur(16px)";
+navbar.style.boxShadow = "0 10px 30px rgba(0,0,0,0.08)";
 
-    <h3>10. Updates to This Notice</h3>
-    <p>We may update this Privacy Notice from time to time. The updated version will be indicated by the revised date at the top. We encourage you to review this notice periodically.</p>
+}else{
 
-    <h3>11. Contact Us</h3>
-    <p>If you have questions about this notice, contact us at <a href="mailto:contact@tbcarch.in">contact@tbcarch.in</a> or by post at:<br><br>
-    <strong>The Bakers Company LLP</strong><br>
-    Chennai, Tamil Nadu – 600023, India</p>
+navbar.style.background = "rgba(248,244,236,0.55)";
+navbar.style.boxShadow = "none";
 
-    <h3>12. Review, Update, or Delete Your Data</h3>
-    <p>To request access to, correction of, or deletion of your personal information, please submit a <a href="https://app.termly.io/dsar/2c2ed243-5725-4bda-b384-a98fe0f6f538" target="_blank" rel="noopener">data subject access request</a>.</p>
-  </div>
-</div>
+}
 
-<!-- ===== FOOTER ===== -->
+});
+
+<script>
+/* ── Drag-to-scroll on carousel ── */
+(function(){
+  const wrapper = document.querySelector('.insta-carousel-wrapper');
+  const track   = document.getElementById('instaTrack');
+  if(!wrapper || !track) return;
+ 
+  let isDragging = false, startX = 0, scrollLeft = 0, dragOffset = 0;
+ 
+  wrapper.addEventListener('mousedown', e => {
+    isDragging = true;
+    startX = e.pageX;
+    dragOffset = parseFloat(track.style.marginLeft || 0);
+    track.style.animationPlayState = 'paused';
+  });
+  window.addEventListener('mousemove', e => {
+    if(!isDragging) return;
+    const delta = e.pageX - startX;
+    track.style.marginLeft = (dragOffset + delta) + 'px';
+  });
+  window.addEventListener('mouseup', () => {
+    if(!isDragging) return;
+    isDragging = false;
+    track.style.animationPlayState = '';
+    track.style.marginLeft = '';
+  });
+ 
+  /* Touch support */
+  wrapper.addEventListener('touchstart', e => { startX = e.touches[0].pageX; dragOffset = parseFloat(track.style.marginLeft||0); track.style.animationPlayState='paused'; }, {passive:true});
+  wrapper.addEventListener('touchmove',  e => { const delta = e.touches[0].pageX - startX; track.style.marginLeft=(dragOffset+delta)+'px'; }, {passive:true});
+  wrapper.addEventListener('touchend',   () => { track.style.animationPlayState=''; track.style.marginLeft=''; });
+})();
+</script>
+
+</script>
 <footer class="site-footer">
+
   <div class="footer-container">
+
     <div class="footer-brand">
       <h3>TBC The Baker's Company</h3>
       <p>Designing spaces that feel like home.</p>
     </div>
+
     <div class="footer-links">
       <h4>Explore</h4>
       <a href="index.html">Home</a>
@@ -206,77 +260,50 @@
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </div>
+
     <div class="footer-contact">
       <h4>Connect</h4>
-      <p><a href="mailto:contact@tbcarch.in?subject=Interior Design Enquiry">contact@tbcarch.in</a></p>
+      <p>Chennai-Bangalore-Puducherry</p>
+      <p>+91 9597571740</p>
+      <p>contact@tbcarch.in</p>
     </div>
+
   </div>
+
   <div class="footer-bottom">
     © 2026 The Baker's Company. All rights reserved.
-    <a href="javascript:void(0)" onclick="openPrivacy()" style="color:#a58e7c; text-decoration:none; margin-left:12px;">Privacy Policy</a>
   </div>
+
 </footer>
-
-<!-- ===== SCRIPTS ===== -->
 <script>
-function openPopup(){ document.getElementById('contactPopup').classList.add('active'); }
-function closePopup(){ document.getElementById('contactPopup').classList.remove('active'); }
-function toggleNav(){
-  document.getElementById('navLinks').classList.toggle('open');
-  document.getElementById('navHamburger').classList.toggle('open');
+
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("active");
 }
-function openPrivacy(){ document.getElementById('privacyModal').classList.add('active'); }
-function closePrivacy(){ document.getElementById('privacyModal').classList.remove('active'); }
-
-window.addEventListener('scroll', () => {
-  const floatingCTA = document.getElementById('floatingCTA');
-  if (window.scrollY > 300) { floatingCTA.classList.add('show'); }
-  else { floatingCTA.classList.remove('show'); }
+});
 });
 
-window.addEventListener("scroll", function() {
-  const navbar = document.getElementById("tbcNavbar");
-  if (window.scrollY > 80) {
-    navbar.style.background = "rgba(248,244,236,0.9)";
-    navbar.style.backdropFilter = "blur(16px)";
-    navbar.style.boxShadow = "0 10px 30px rgba(0,0,0,0.08)";
-  } else {
-    navbar.style.background = "rgba(248,244,236,0.55)";
-    navbar.style.boxShadow = "none";
-  }
-});
+document.querySelectorAll(".reveal, .reveal-group")
+.forEach(el=>observer.observe(el));
 
-document.getElementById("leadForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-  const f = this; const d = new FormData();
-  d.append("entry.735551418", f[0].value);
-  d.append("entry.930599246", f[1].value);
-  d.append("entry.672421389", f[2].value);
-  d.append("entry.1846593654", f[3].value);
-  d.append("entry.1890531834", "Website Popup");
-  fetch("https://docs.google.com/forms/d/e/1FAIpQLSeW5xAwG0S5nqVI1KMt8gz8Xejyug2edtm_QlY_edKg1JlaXw/formResponse",
-    { method: "POST", mode: "no-cors", body: d });
-  alert("Thank you! TBC will contact you within 24 hours.");
-  closePopup(); f.reset();
-});
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) entry.target.classList.add("active");
-  });
-});
-document.querySelectorAll(".reveal, .reveal-group").forEach(el => observer.observe(el));
-
-const hero = document.querySelector(".hero");
-window.addEventListener("scroll", () => {
-  if (!hero) return;
-  hero.style.transform = `translateY(${window.scrollY * 0.2}px)`;
-});
 </script>
+<script>
 
+const hero=document.querySelector(".hero");
+
+window.addEventListener("scroll",()=>{
+
+if(!hero)return;
+
+const offset=window.scrollY * 0.2;
+
+hero.style.transform=`translateY(${offset}px)`;
+
+});
+
+</script>
 </body>
+
 </html>
-
-
-
-
