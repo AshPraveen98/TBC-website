@@ -325,6 +325,87 @@ padding:0 40px;
   background:#e9ddd1;
   border-radius:12px;
 }
+/* =====================================================
+   INSTAGRAM CAROUSEL — add this to your styles.css
+   ===================================================== */
+ 
+/* ── Carousel wrapper (full-width, clips overflow) ── */
+.insta-carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 0 0 40px;
+  cursor: grab;
+  user-select: none;
+}
+.insta-carousel-wrapper:active { cursor: grabbing; }
+ 
+/* ── Scrolling track ── */
+.insta-track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  animation: instaScroll 28s linear infinite;
+}
+.insta-track:hover { animation-play-state: paused; }
+ 
+@keyframes instaScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+ 
+/* ── Individual image tiles ── */
+.insta-slide {
+  flex: 0 0 280px;
+  height: 280px;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.insta-slide:hover {
+  transform: scale(1.03);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.18);
+  z-index: 2;
+}
+.insta-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+ 
+/* ── Soft fade overlays on left & right edges ── */
+.insta-fade {
+  position: absolute;
+  top: 0; bottom: 40px;
+  width: 120px;
+  pointer-events: none;
+  z-index: 3;
+}
+.insta-fade-left  {
+  left: 0;
+  background: linear-gradient(to right, #f8f4ec, transparent);
+}
+.insta-fade-right {
+  right: 0;
+  background: linear-gradient(to left, #f8f4ec, transparent);
+}
+ 
+/* ── Instagram handle link style ── */
+.instagram-header a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.instagram-header a:hover { opacity: 1; }
+ 
+/* ── Mobile adjustments ── */
+@media (max-width: 600px) {
+  .insta-slide { flex: 0 0 220px; height: 220px; }
+  .insta-fade  { width: 60px; }
+}
 
 /* FLOATING CTA */
 .floating-cta{position:fixed;right:24px;bottom:24px;display:flex;flex-direction:column;gap:12px;z-index:999;opacity:0;transform:translateY(20px);transition:.4s}
