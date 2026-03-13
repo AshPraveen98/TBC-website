@@ -2002,20 +2002,20 @@ box-shadow:0 10px 20px rgba(0,0,0,0.12);
 }
 
 .nav-logo {
-  height: 40px;
+  height: 48px;
   width: auto;
   display: block;
 }
 
 .popup-logo {
-  height: 44px;
+  height: 52px;
   width: auto;
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .footer-logo {
-  height: 48px;
+  height: 52px;
   width: auto;
   display: block;
   margin-bottom: 14px;
@@ -2023,7 +2023,7 @@ box-shadow:0 10px 20px rgba(0,0,0,0.12);
 }
 
 @media (max-width: 768px) {
-  .nav-logo   { height: 30px; }
-  .popup-logo { height: 34px; }
-  .footer-logo { height: 38px; }
+  .nav-logo    { height: 36px; }
+  .popup-logo  { height: 42px; }
+  .footer-logo { height: 42px; }
 }
