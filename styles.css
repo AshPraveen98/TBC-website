@@ -2001,7 +2001,7 @@ box-shadow:0 10px 20px rgba(0,0,0,0.12);
 .tbc-lockup {
   display: inline-flex;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
   text-decoration: none;
 }
 
@@ -2011,7 +2011,7 @@ box-shadow:0 10px 20px rgba(0,0,0,0.12);
 
 /* The SVG monogram mark */
 .logo-mark {
-  height: 56px;
+  height: 64px;
   width: auto;
   flex-shrink: 0;
   display: block;
@@ -2021,7 +2021,7 @@ box-shadow:0 10px 20px rgba(0,0,0,0.12);
 .logo-divider {
   display: block;
   width: 1px;
-  height: 32px;
+  height: 38px;
   background: #c9b89e;
   flex-shrink: 0;
 }
@@ -2037,8 +2037,8 @@ box-shadow:0 10px 20px rgba(0,0,0,0.12);
   display: block;
   font-family: 'Playfair Display', serif;
   font-weight: 700;
-  font-size: 15px;
-  letter-spacing: 0.22em;
+  font-size: 14px;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
   color: #2b2b2b;
   white-space: nowrap;
@@ -2048,11 +2048,12 @@ box-shadow:0 10px 20px rgba(0,0,0,0.12);
 .logo-tagline {
   display: block;
   font-family: Georgia, serif;
-  font-size: 8.5px;
-  letter-spacing: 0.22em;
-  color: #5a4535;
+  font-size: 8px;
+  letter-spacing: 0.24em;
+  color: #6b5040;
   white-space: nowrap;
   line-height: 1;
+  margin-top: 5px;
 }
 
 /* Light variant — popup (brown bg) */
