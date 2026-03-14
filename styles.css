@@ -1994,36 +1994,121 @@ box-shadow:0 10px 20px rgba(0,0,0,0.12);
     max-height: 88vh;
   }
 }
-/* ================= LOGO ================= */
-.logo-link {
+/* ================= LOGO LOCKUP ================= */
+
+/* Shared lockup layout */
+.logo-link,
+.tbc-lockup {
   display: inline-flex;
   align-items: center;
+  gap: 14px;
   text-decoration: none;
 }
 
-.nav-logo {
-  height: 48px;
-  width: auto;
-  display: block;
+.tbc-lockup {
+  display: flex;
 }
 
-.popup-logo {
-  height: 52px;
+/* The SVG monogram mark */
+.logo-mark {
+  height: 46px;
   width: auto;
-  display: block;
-  margin-bottom: 10px;
+  flex-shrink: 0;
 }
 
-.footer-logo {
-  height: 52px;
-  width: auto;
+/* Thin vertical divider between mark and text */
+.logo-divider {
   display: block;
-  margin-bottom: 14px;
-  opacity: 0.92;
+  width: 1px;
+  height: 32px;
+  background: #c9b89e;
+  flex-shrink: 0;
+}
+
+/* Text block: name + tagline stacked */
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.logo-name {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  color: #3a2f27;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.logo-tagline {
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 8px;
+  letter-spacing: 0.2em;
+  color: #795a3c;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+/* Light variant — popup (brown bg) */
+.logo-text--light .logo-name  { color: #f4f1ed; }
+.logo-text--light .logo-tagline { color: rgba(244,241,237,0.75); }
+.popup-brand .logo-divider    { background: rgba(255,255,255,0.3); }
+
+/* Dark variant — footer (cream bg) */
+.logo-text--dark .logo-name   { color: #3a2f27; }
+.logo-text--dark .logo-tagline { color: #795a3c; }
+
+/* Popup brand block layout */
+.popup-brand.tbc-lockup {
+  margin-bottom: 6px;
+}
+
+/* Footer brand block layout */
+.footer-brand.tbc-lockup {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.footer-brand.tbc-lockup > .logo-text--dark {
+  margin-top: 0;
+}
+
+/* Inner row for mark + divider + text in footer */
+.footer-brand.tbc-lockup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-brand.tbc-lockup .logo-mark,
+.footer-brand.tbc-lockup .logo-divider,
+.footer-brand.tbc-lockup .logo-text--dark {
+  /* Lay out horizontally inside footer */
+}
+
+/* Override: footer inner lockup is a row */
+.footer-brand.tbc-lockup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.footer-brand.tbc-lockup p {
+  width: 100%;
+  margin-top: 4px;
 }
 
 @media (max-width: 768px) {
-  .nav-logo    { height: 36px; }
-  .popup-logo  { height: 42px; }
-  .footer-logo { height: 42px; }
+  .logo-mark    { height: 36px; }
+  .logo-name    { font-size: 11px; }
+  .logo-tagline { font-size: 7px; }
+  .logo-divider { height: 26px; }
 }
