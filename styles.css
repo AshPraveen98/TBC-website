@@ -2011,9 +2011,10 @@ box-shadow:0 10px 20px rgba(0,0,0,0.12);
 
 /* The SVG monogram mark */
 .logo-mark {
-  height: 46px;
+  height: 52px;
   width: auto;
   flex-shrink: 0;
+  display: block;
 }
 
 /* Thin vertical divider between mark and text */
@@ -2107,7 +2108,7 @@ box-shadow:0 10px 20px rgba(0,0,0,0.12);
 }
 
 @media (max-width: 768px) {
-  .logo-mark    { height: 36px; }
+  .logo-mark    { height: 40px; }
   .logo-name    { font-size: 11px; }
   .logo-tagline { font-size: 7px; }
   .logo-divider { height: 26px; }
