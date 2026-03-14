@@ -2011,7 +2011,7 @@ box-shadow:0 10px 20px rgba(0,0,0,0.12);
 
 /* The SVG monogram mark */
 .logo-mark {
-  height: 52px;
+  height: 56px;
   width: auto;
   flex-shrink: 0;
   display: block;
@@ -2036,10 +2036,11 @@ box-shadow:0 10px 20px rgba(0,0,0,0.12);
 .logo-name {
   display: block;
   font-family: 'Playfair Display', serif;
-  font-weight: 600;
-  font-size: 13px;
-  letter-spacing: 0.12em;
-  color: #3a2f27;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #2b2b2b;
   white-space: nowrap;
   line-height: 1;
 }
@@ -2047,9 +2048,9 @@ box-shadow:0 10px 20px rgba(0,0,0,0.12);
 .logo-tagline {
   display: block;
   font-family: Georgia, serif;
-  font-size: 8px;
-  letter-spacing: 0.2em;
-  color: #795a3c;
+  font-size: 8.5px;
+  letter-spacing: 0.22em;
+  color: #5a4535;
   white-space: nowrap;
   line-height: 1;
 }
