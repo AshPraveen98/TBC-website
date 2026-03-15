@@ -220,6 +220,9 @@ const observer  = new IntersectionObserver(entries => {
 });
 document.querySelectorAll(".reveal, .reveal-group").forEach(el => observer.observe(el));
 </script>
+<script>
+
+let loaderTimer;
 function showLoader(){
 loaderTimer = setTimeout(function(){
 document.getElementById("loader").style.opacity = "1";
