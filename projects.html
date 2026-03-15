@@ -17,7 +17,9 @@
 </script>
 </head>
 <body>
-
+<div id="loader">
+  <img src="/Images/tbc-loader-logo.svg" alt="TBC Loader Logo">
+</div>
 <!-- ===== NAVBAR ===== -->
 <header class="tbc-navbar" id="tbcNavbar">
   <div class="nav-container">
@@ -218,7 +220,24 @@ const observer  = new IntersectionObserver(entries => {
 });
 document.querySelectorAll(".reveal, .reveal-group").forEach(el => observer.observe(el));
 </script>
+function showLoader(){
+loaderTimer = setTimeout(function(){
+document.getElementById("loader").style.opacity = "1";
+}, 400);
+}
 
+function hideLoader(){
+clearTimeout(loaderTimer);
+const loader = document.getElementById("loader");
+loader.classList.add("loader-hidden");
+document.body.classList.add("page-loaded");
+}
+
+window.addEventListener("load", hideLoader);
+
+showLoader();
+
+</script>
 </body>
 </html>
 
