@@ -458,10 +458,12 @@ window.addEventListener("scroll", function(){
 </script>
 <script>
 window.addEventListener("load", function(){
+
 const loader = document.getElementById("loader");
 
 setTimeout(function(){
 loader.classList.add("loader-hidden");
+document.body.classList.add("page-loaded");
 }, 2000);
 
 });
