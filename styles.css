@@ -1530,6 +1530,14 @@ animation:logoFade 2s ease;
 opacity:0;
 pointer-events:none;
 }
+body{
+opacity:0;
+transition:opacity 0.8s ease;
+}
+
+body.page-loaded{
+opacity:1;
+}
 /* ===== TABLET BREAKPOINT (iPad Mini, iPad Air, iPad Pro portrait, large Android tablets) ===== */
 @media (min-width: 769px) and (max-width: 1024px) {
 
