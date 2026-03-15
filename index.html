@@ -457,16 +457,26 @@ window.addEventListener("scroll", function(){
 });
 </script>
 <script>
-window.addEventListener("load", function(){
 
+let loaderTimer;
+
+function showLoader(){
+loaderTimer = setTimeout(function(){
+document.getElementById("loader").style.opacity = "1";
+}, 400);
+}
+
+function hideLoader(){
+clearTimeout(loaderTimer);
 const loader = document.getElementById("loader");
-
-setTimeout(function(){
 loader.classList.add("loader-hidden");
 document.body.classList.add("page-loaded");
-}, 2000);
+}
 
-});
+window.addEventListener("load", hideLoader);
+
+showLoader();
+
 </script>
 </body>
 </html>
