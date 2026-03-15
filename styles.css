@@ -147,6 +147,9 @@ padding:0 40px;
   top:0;
   width:100%;
   z-index:1000;
+  .tbc-navbar{
+  transition: background 0.35s ease, box-shadow 0.35s ease, backdrop-filter 0.35s ease;
+  }
 
   background:rgba(248,244,236,0.45);
   backdrop-filter:blur(18px) saturate(140%);
