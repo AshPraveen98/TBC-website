@@ -23,6 +23,11 @@ gtag('config', 'G-XXXXXXXXXX');
 
 </head>
 <body>
+<div id="loader">
+  <div class="loader-content">
+    <img src="/Images/tbc-logo-light.svg" alt="TBC Architecture Logo">
+  </div>
+</div>
 
 <!-- ===== TBC NAVBAR ===== -->
 <header class="tbc-navbar" id="tbcNavbar">
@@ -452,6 +457,19 @@ window.addEventListener("scroll", function(){
     nb.style.boxShadow = "none";
   }
 });
+</script>
+<script>
+
+window.addEventListener("load", function(){
+
+const loader = document.getElementById("loader");
+
+setTimeout(function(){
+loader.classList.add("loader-hidden");
+}, 900);
+
+});
+
 </script>
 </body>
 </html>
