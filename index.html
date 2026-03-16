@@ -386,25 +386,14 @@ document.getElementById("leadForm").addEventListener("submit",function(e){
 </script>
 <script>
 
-window.addEventListener("scroll", function(){
-
 const navbar = document.getElementById("tbcNavbar");
 
-if(window.scrollY > 80){
+window.addEventListener("scroll", () => {
 
-navbar.style.background = "rgba(248,244,236,0.6)";
-navbar.style.backdropFilter = "blur(22px)";
-navbar.style.webkitBackdropFilter = "blur(22px)";
-navbar.style.boxShadow = "0 8px 24px rgba(0,0,0,0.35)";
-
-}else{
-
-navbar.style.background = "rgba(248,244,236,0.35)";
-navbar.style.backdropFilter = "blur(18px)";
-navbar.style.webkitBackdropFilter = "blur(18px)";
-navbar.style.boxShadow = "none";
-navbar.style.borderBottom = "1px solid rgba(255,255,255,0.25)";
-
+if (window.scrollY > 80) {
+  navbar.classList.add("scrolled");
+} else {
+  navbar.classList.remove("scrolled");
 }
 
 });
