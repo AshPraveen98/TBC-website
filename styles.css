@@ -219,16 +219,6 @@ box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   border-radius: 30px;
 }
 
-/* Logo */
-
-.tbc-logo{
-  font-family:"Playfair Display", serif;
-  font-size:26px;
-  font-weight:600;
-  color:var(--tbc-brown);
-  letter-spacing:1px;
-}
-
 /* Links */
 
 .tbc-nav-links{
@@ -1090,15 +1080,6 @@ body::before{
   z-index:0;
 }
 
-/* Logo */
-
-.tbc-logo{
-  font-family: "Playfair Display", serif;
-  font-size: 26px;
-  font-weight: 600;
-  color: var(--tbc-brown);
-  letter-spacing: 1px;
-}
 /* =========================
    PAGE TRANSITION
 ========================= */
