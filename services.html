@@ -3,7 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services | The Baker's Company</title>
+<meta name="description" content="Residential interiors, commercial spaces, design consultation and turnkey execution. The Baker's Company delivers end-to-end interior design across South India.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.tbcarch.in/services">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Interior Design Services | The Baker's Company Chennai">
+<meta property="og:description" content="Residential interiors, commercial spaces, design consultation and turnkey execution. The Baker's Company delivers end-to-end interior design across South India.">
+<meta property="og:url" content="https://www.tbcarch.in/services">
+<meta property="og:image" content="https://www.tbcarch.in/Images/og-image.jpg">
+<meta property="og:site_name" content="The Baker's Company">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Interior Design Services | The Baker's Company Chennai">
+<meta name="twitter:description" content="Residential interiors, commercial spaces, design consultation and turnkey execution. The Baker's Company delivers end-to-end interior design across South India.">
+<meta name="twitter:image" content="https://www.tbcarch.in/Images/og-image.jpg">
+<title>Interior Design Services | The Baker's Company Chennai</title>
 <link rel="stylesheet" href="styles.css">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <!-- Google tag (gtag.js) -->
@@ -119,7 +134,7 @@
     </div>
     <div class="footer-contact">
       <h4>Connect</h4>
-      <p><a href="mailto:contact@tbcarch.in?subject=Interior Design Enquiry">contact@tbcarch.in</a></p>
+      <p><a href="/cdn-cgi/l/email-protection#13707c7d67727067536771707261707b3d7a7d2c606671797670672e5a7d6776617a7c61335776607a747d33567d62667a616a"><span class="__cf_email__" data-cfemail="caa9a5a4beaba9be8abea8a9abb8a9a2e4a3a4">[email&#160;protected]</span></a></p>
     </div>
   </div>
   <div class="footer-bottom">
@@ -154,7 +169,7 @@
   </div>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function openPopup(){ document.getElementById('contactPopup').classList.add('active'); }
 function closePopup(){ document.getElementById('contactPopup').classList.remove('active'); }
 function toggleNav(){
@@ -162,62 +177,32 @@ function toggleNav(){
   document.getElementById('navHamburger').classList.toggle('open');
 }
 
-window.addEventListener("scroll", function() {
-  const navbar = document.getElementById("tbcNavbar");
-  if (window.scrollY > 50) {
-    navbar.style.background = "rgba(248,244,236,0.85)";
-    navbar.style.boxShadow = "0 10px 30px rgba(0,0,0,0.06)";
+window.addEventListener("scroll", function(){
+  var nb = document.getElementById("tbcNavbar");
+  if(window.scrollY > 50){
+    nb.style.background = "rgba(248,244,236,0.85)";
+    nb.style.boxShadow = "0 10px 30px rgba(0,0,0,0.06)";
   } else {
-    navbar.style.background = "rgba(248,244,236,0.65)";
-    navbar.style.boxShadow = "none";
+    nb.style.background = "rgba(248,244,236,0.65)";
+    nb.style.boxShadow = "none";
   }
 });
 
-document.getElementById("leadForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-  const f = this; const d = new FormData();
-  d.append("entry.735551418", f[0].value);
-  d.append("entry.930599246", f[1].value);
-  d.append("entry.672421389", f[2].value);
-  d.append("entry.1846593654", f[3].value);
-  d.append("entry.1890531834", "Services Page Popup");
-  fetch("https://docs.google.com/forms/d/e/1FAIpQLSeW5xAwG0S5nqVI1KMt8gz8Xejyug2edtm_QlY_edKg1JlaXw/formResponse",
-    {method:"POST", mode:"no-cors", body:d});
-  alert("Thank you! TBC will contact you within 24 hours.");
-  closePopup(); f.reset();
+var obs = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add("active"); });
 });
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) entry.target.classList.add("active");
-  });
-});
-document.querySelectorAll(".reveal, .reveal-group").forEach(el => observer.observe(el));
+document.querySelectorAll(".reveal,.reveal-group").forEach(function(el){ obs.observe(el); });
 </script>
+
 <script>
-let loaderTimer;
-function showLoader(){
-loaderTimer = setTimeout(function(){
-document.getElementById("loader").style.opacity = "1";
-}, 400);
-}
-
 function hideLoader(){
-clearTimeout(loaderTimer);
-const loader = document.getElementById("loader");
-loader.classList.add("loader-hidden");
-document.body.classList.add("page-loaded");
+  var loader = document.getElementById('loader');
+  if(!loader) return;
+  loader.classList.add('loader-hidden');
+  document.body.classList.add('page-loaded');
 }
-
-window.addEventListener("load", hideLoader);
-
-showLoader();
-
+window.addEventListener('load', hideLoader);
+setTimeout(hideLoader, 3000);
 </script>
 </body>
 </html>
-
-
-
-
-
