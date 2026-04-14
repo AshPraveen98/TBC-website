@@ -2,19 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://tbcarch.in/</loc>
+    <loc>https://www.tbcarch.in/</loc>
   </url>
 
   <url>
-    <loc>https://tbcarch.in/about</loc>
+    <loc>https://www.tbcarch.in/about</loc>
   </url>
 
   <url>
-    <loc>https://tbcarch.in/projects</loc>
+    <loc>https://www.tbcarch.in/projects</loc>
   </url>
 
   <url>
-    <loc>https://tbcarch.in/contact</loc>
+    <loc>https://www.tbcarch.in/services</loc>
+  </url>
+
+  <url>
+    <loc>https://www.tbcarch.in/contact</loc>
   </url>
 
 </urlset>
